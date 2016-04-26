@@ -1,149 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome</title>
+  <meta charset="UTF-8">
+  <title>Responsive Parallax Navbar Logo - Bootstrap</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/simple-slidebar.css">
-    <script src="js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/simple-slidebar.css">
+
+
+  <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'>
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+
 
 </head>
+
 <body>
-
-
 
 
 <div id="wrapper">
 
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#">
-                    Start Bootstrap
-                </a>
-            </li>
-            <li>
-                <a href="#">Dashboard</a>
-            </li>
-            <li>
-                <a href="#">Shortcuts</a>
-            </li>
-            <li>
-                <a href="#">Overview</a>
-            </li>
-            <li>
-                <a href="#">Events</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
-    </div>
-    <!-- /#sidebar-wrapper -->
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#">
+          Start Bootstrap
+        </a>
+      </li>
+      <li>
+        <a href="#">Dashboard</a>
+      </li>
+      <li>
+        <a href="#">Shortcuts</a>
+      </li>
+      <li>
+        <a href="#">Overview</a>
+      </li>
+      <li>
+        <a href="#">Events</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Services</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper -->
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper"><nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Brand</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-
-        <div class="container-fluid">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Simple Sidebar</h1>
-                    <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+  <!-- Page Content -->
 
 
+  <div class="container-fluid">
 
-                </div>
-            </div>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="small-logo-container">
+
+            <a class="small-logo" href="#">↥Small Logo</a>
+          </div>
         </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+            <span class="toggle-bar"></span>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Início</a></li>
+            <li><a href="#">A Empresa</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Processo Seletivo</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
-    <!-- /#page-content-wrapper -->
+
+    <div class="container-fluid big-logo-row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 big-logo-container">
+            <h1 class="big-logo">↧Big Logo</h1>
+          </div><!--/.col-xs-12 -->
+        </div><!--/.row -->
+      </div><!--/.container -->
+    </div><!--/.container-fluid -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6 col-sm-8">
+          <h2>Filler</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id maxime repellat repellendus porro voluptas laudantium similique eveniet quis perferendis beatae commodi sunt ullam provident dolorum doloribus esse accusamus dolores. Corrupti.</p>
+          <p>Consectetur incidunt voluptatibus ipsa nisi esse eos deleniti repudiandae at quo sit praesentium nemo optio perspiciatis sequi quaerat voluptates minus reprehenderit doloremque accusamus et quisquam nesciunt sunt consequatur explicabo excepturi!</p>
+          <p>Sequi facilis ea dolor asperiores quibusdam eveniet optio corporis et accusantium voluptatem architecto quis iste recusandae molestias dolorem soluta ex blanditiis illo impedit laborum iusto? Iure sapiente eos molestiae est?</p>
+          <p>Numquam delectus recusandae nesciunt rem itaque harum corporis maxime hic iste molestias adipisci excepturi ullam libero necessitatibus cum eum modi minus obcaecati est nemo quia velit earum perferendis consectetur porro?</p>
+          <p>Accusamus dicta consequatur quos ipsum rerum tempora assumenda ex excepturi itaque soluta magnam debitis voluptatibus neque eos porro. Neque tempora ea beatae delectus facere quas voluptas accusamus maxime enim consequuntur.</p>
+          <p>Saepe obcaecati facilis dolore numquam nam quod laudantium. Rerum esse voluptas eum aut porro beatae adipisci exercitationem ab voluptatum corporis quas placeat sapiente nisi ut officia eaque debitis. Corrupti eveniet!</p>
+          <p>Eius natus numquam tempore alias ipsam commodi aut similique corporis beatae velit maxime obcaecati voluptatibus cum repudiandae minus inventore doloremque optio saepe nihil eum reprehenderit quas consequuntur perspiciatis quo quam.</p>
+          <p>Ea perspiciatis incidunt unde ipsam cupiditate necessitatibus magnam quod odit. Beatae adipisci non praesentium tenetur dolores fugit repellat consequuntur unde aperiam eligendi ipsa doloribus corporis officiis ipsam quod numquam assumenda!</p>
+          <p>Ullam ut ex cum corporis numquam quia hic aut nisi itaque laboriosam eaque earum commodi nulla magni voluptate reiciendis laborum esse odit blanditiis aperiam veniam eos velit similique eveniet ad.</p>
+          <p>Esse veritatis inventore explicabo hic consequuntur ex autem praesentium quaerat blanditiis illo deleniti dolorum porro tenetur. Repellat sed repellendus natus cum molestias numquam vitae vel eum voluptatem praesentium tempora quae.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nostrum consequatur odit eius blanditiis sit mollitia ut porro cumque nam repudiandae accusantium nisi excepturi corporis incidunt inventore ipsam? Officiis eum!</p>
+          <p>Nostrum minus dicta quod totam autem ipsum illo velit labore obcaecati est ducimus ullam sit iusto ea pariatur sint nulla perferendis modi dolorum cumque non laboriosam ratione maiores possimus numquam!</p>
+          <p>Deserunt ex dolor atque sapiente suscipit aspernatur et iste necessitatibus enim magni blanditiis quaerat rerum perspiciatis expedita magnam nihil neque natus quos quidem veritatis eligendi dolorem itaque laboriosam beatae dolores!</p>
+          <p>Nostrum tenetur rem cum tempora sapiente at possimus assumenda ex quos illum facilis quibusdam facere voluptatum. Necessitatibus tempore animi earum inventore quaerat sit velit totam rem nulla consequuntur dolorem architecto!</p>
+          <p>Illum doloremque ipsa magni fugiat explicabo nam officiis expedita architecto voluptatem beatae deserunt optio iusto nostrum facere voluptatum. Tempora dolore quasi vero aut voluptatem eaque nobis iusto enim dignissimos molestias!</p>
+        </div><!--/.col-xs-12 -->
+      </div><!--/.row -->
+    </div><!--/.container -->
+
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Simple Sidebar</h1>
+        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /#page-content-wrapper -->
 
 </div>
+
 <!-- /#wrapper -->
 
 
-<h1>Hello World</h1>
 
 
-<h2> Start Of Project</h2>
 
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'></script>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
 
 <!-- Menu Toggle Script -->
 <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
+  $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+  });
 </script>
+
 
 
 </body>
