@@ -17,7 +17,7 @@
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
   border-color: transparent;
 }
-@media (max-width: 767px) {
+@media (max-width: 300px) {
   .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     background: rgba(255, 255, 255, 0.75);
   }
@@ -53,12 +53,12 @@
   background: gold;
 }
 .big-logo-row .big-logo-container {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 .big-logo-row h1 {
   font-size: 4em;
   margin: 0;
-  padding: 0 0 15px 0;
+  padding: 0 0 5px 0;
 }
 @media (min-width: 400px) {
   .big-logo-row h1 {
