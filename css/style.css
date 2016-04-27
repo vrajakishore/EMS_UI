@@ -1,70 +1,10 @@
-/* *********************************
-           Variables
-  ********************************** */
-/* *********************************
-   Some Style Overrides on Bootstrap
-  ********************************** */
-.navbar-inverse {
-  background: #000000;
-  border-bottom: none;
+.effect1{
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
 }
 
-.navbar-inverse .navbar-toggle {
-  border: 1px solid #333;
-  border-color: rgba(255, 255, 255, 0.7);
-}
-
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-  border-color: transparent;
-}
-@media (max-width: 300px) {
-  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    background: rgba(255, 255, 255, 0.75);
-  }
-}
-
-.navbar-inverse .navbar-nav > li > a {
-  color: black;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-  color: #22F;
-}
-
-/* *********************************
-           Toolbar Logo
-  ********************************** */
-.small-logo-container {
-  padding-top: 50px;
-  height: 50px;
-  overflow: hidden;
-}
-
-.small-logo {
-  color: white;
-  font-size: 2.5em;
-  padding-bottom: 2px;
-}
-
-/* *********************************
-           Big Logo
-  ********************************** */
-.big-logo-row {
-  background: gold;
-}
-.big-logo-row .big-logo-container {
-  padding-top: 20px;
-}
-.big-logo-row h1 {
-  font-size: 4em;
-  margin: 0;
-  padding: 0 0 5px 0;
-}
-@media (min-width: 400px) {
-  .big-logo-row h1 {
-    font-size: 4.5em;
-  }
-}
+/*Login modal css*/
 .prettyline {
   height: 5px;
   border-top: 0;
@@ -75,3 +15,4 @@
   background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
   background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
+

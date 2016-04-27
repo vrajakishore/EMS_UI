@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="routerApp">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>BOOK MY EVENT</title>
+    <title>Responsive Parallax Navbar Logo - Bootstrap</title>
 
 
 
@@ -18,48 +18,229 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
 
     <script src="app/app.js"></script>
-    
-    
-  </head>
 
-  <body>
 
-       <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
+</head>
+
+<body style="padding-top: 70px">
+
+<nav class="navbar navbar-default navbar-fixed-top effect1">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="small-logo-container">
-            <a class="small-logo" href="#"><font color="#fffafa"> BOOK MY EVENT</font></a>
-          </div>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
         </div>
-        <div class="navbar-collapse collapse">
-          
-          <ul class="nav navbar-nav navbar-right">
-            <li><a ui-sref="home"><strong><font color="#fffafa" >HOME</font></strong></a></li>
-            <li><a ui-sref="events"><strong><font color="#fffafa">EVENTS</font></strong></a></li>
-            <li><a ui-sref="events"><strong><font color="#fffafa">LOGIN</font></strong></a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a ui-sref="home"><strong>HOME</strong></a></li>
+                <li><a ui-sref="events"><strong>EVENTS</strong></a></li>
+                <li><a type="button" data-toggle="modal" data-target="#loginModal"><strong>LOGIN</strong></a></li>
+                <li>
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search...">
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-default">
+								<span class="glyphicon glyphicon-search">
+									<span class="sr-only">Search...</span>
+								</span>
+                            </button>
+						</span>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!-- Fixed navbar
+<div class="nav  navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+
+        &lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="images/temp.png">
+            </a>
+        </div>
+
+
+
+
+        <ul class="nav navbar-nav navbar-right">
+                <li><a ui-sref="home"><strong>HOME</strong></a></li>
+                <li><a ui-sref="events"><strong>EVENTS</strong></a></li>
+                <li><a type="button" data-toggle="modal" data-target="#loginModal"><strong>LOGIN</strong></a></li>
+                <li>
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search...">
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-default">
+								<span class="glyphicon glyphicon-search">
+									<span class="sr-only">Search...</span>
+								</span>
+                            </button>
+						</span>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+
+
+
     </div>
+</div>-->
 
 
 
-       <div ui-view></div>
 
-               <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<!--menu pages will be here-->
+<div ui-view></div>
+
+
+<!--Login Modal -->
+
+<div class="modal fade bs-modal-sm" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <br>
+            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active"><a href="#login" data-toggle="tab">Sign In</a></li>
+                    <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+                    <li class=""><a href="#why" data-toggle="tab">Why?</a></li>
+                </ul>
+            </div>
+            <div class="modal-body">
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in" id="why">
+                        <p>We need this information so that you can receive access to the site and its content. Rest assured your information will not be sold, traded, or given to anyone.</p>
+                        <p></p><br> Please contact admin@bookmyevents.com</a> for any other inquiries.</p>
+                    </div>
+                    <div class="tab-pane fade active in" id="login">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <!-- Sign In Form -->
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="userid"></span> Email</label>
+                                    <div class="controls">
+                                        <input required="" id="userid" name="userid" type="email" class="form-control" placeholder="JoeSixpack" class="input-medium" required="">
+                                    </div>
+                                </div>
+
+                                <!-- Password input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="passwordinput">Password</label>
+                                    <div class="controls">
+                                        <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+                                    </div>
+                                </div>
+
+
+
+                                <!-- Button -->
+                                <div class="control-group">
+                                    <label class="control-label" for="login"></label>
+                                    <div class="controls">
+                                        <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="signup">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <!-- Sign Up Form -->
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="Email">Email:</label>
+                                    <div class="controls">
+                                        <input id="Email" name="Email" class="form-control" type="text" placeholder="JoeSixpack@sixpacksrus.com" class="input-large" required="">
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="userid">Alias:</label>
+                                    <div class="controls">
+                                        <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
+                                    </div>
+                                </div>
+
+                                <!-- Password input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="password">Password:</label>
+                                    <div class="controls">
+                                        <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                                        <em>1-8 Characters</em>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+                                    <div class="controls">
+                                        <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+                                    </div>
+                                </div>
+
+                                <!-- Multiple Radios (inline) -->
+                                <br>
+                                <div class="control-group">
+                                    <label class="control-label" for="humancheck">Humanity Check:</label>
+                                    <div class="controls">
+                                        <label class="radio inline" for="humancheck-0">
+                                            <input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked">I'm a Robot</label>
+                                        <label class="radio inline" for="humancheck-1">
+                                            <input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human</label>
+                                    </div>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="control-group">
+                                    <label class="control-label" for="confirmsignup"></label>
+                                    <div class="controls">
+                                        <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'></script>
 
-        <script src="js/index.js"></script>
+<script src="js/index.js"></script>
 
-    
-    
-    
-  </body>
+
+
+
+</body>
 </html>
