@@ -65,11 +65,13 @@
     font-size: 4.5em;
   }
 }
+/*
 @media (min-width: 440px) {
   .big-logo-row h1 {
     font-size: 5.5em;
   }
 }
+
 @media (min-width: 500px) {
   .big-logo-row h1 {
     font-size: 6.5em;
@@ -91,3 +93,4 @@
     font-size: 12em;
   }
 }
+*/
