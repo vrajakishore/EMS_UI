@@ -22,23 +22,29 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'pages/events/events.html'
         })
 
-        .state('events.eventsCategory', {
-            url: '/category',
-            templateUrl: 'pages/events/eventsCategory.html'
+        .state('events.eventsMovies', {
+            url: '/movies',
+            templateUrl: 'pages/events/eventsMovies.html'
+
         })
-        .state('events.eventsVenue', {
-            url: '/venue',
-            templateUrl: 'pages/events/eventsVenue.html'
+        .state('events.eventsStage', {
+            url: '/stage',
+            templateUrl: 'pages/events/eventsStage.html',
+            controller:'events'
         })
-        .state('events.eventsPerformer', {
-            url: '/performer',
-            templateUrl: 'pages/events/eventsPerformer.html'
+        .state('events.eventsMusic', {
+            url: '/music',
+            templateUrl: 'pages/events/eventsMusic.html'
         })
-        .state('events.eventsOrganizer', {
-            url: '/organizer',
-            templateUrl: 'pages/events/eventsOrganizer.html'
+        .state('events.eventsSports', {
+            url: '/sports',
+            templateUrl: 'pages/events/eventsSports.html'
         })
 
+        /*.state('dash', {
+            url: '/dash',
+            templateUrl: 'pages/userdashboard.html'
+        })*/
 
        
 

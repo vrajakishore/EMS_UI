@@ -1,0 +1,31 @@
+<h1>Event Stage Shows page</h1>
+
+<h1>{{first_name}}</h1>
+
+<!--<h1>{{event_data.eventDate}}</h1>
+
+<h1>{{d}}</h1>-->
+
+<table class="table table-striped">
+
+    <tr ng-repeat="resource in event_data | filter:search">
+
+        <td>{{ resource.eventName }}</td>
+        <td>{{ resource.eventCertificate }}</td>
+        <td>{{ resource.eventDescription }}</td>
+       <!-- <td>
+            <img class="resize img-circle" ng-src="{{ resource.url }}">
+        </td>
+
+        <td>
+            <div ng-repeat="date in resource.doj">
+                <h6>{{date.dd}}-{{date.mm}}-{{date.yyyy}}</h6>
+
+            </div>
+        </td>-->
+    </tr>
+</table>
+
+<div ng-repeat="r in event_data">
+    {{r.eventName}}
+</div>

@@ -3,3 +3,16 @@
  */
 
 
+routerApp.controller('events', function($scope, $http){
+    //console.log("controdadsa");
+
+    $http.get('json/event.json').success(function (data){
+        $scope.event_data = data;
+
+        $scope.first_name = "kishore";
+
+       // $scope.d = data.eventDate;
+
+        console.log(data);
+    });
+});
