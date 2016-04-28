@@ -62,4 +62,8 @@ $(function () {
     $('#showSearchTerm').text($input.val());
     closeSearch()
   });
+   /*Corousel */
+    $('.carousel ').carousel({
+        interval: 1000
+    })
 });
