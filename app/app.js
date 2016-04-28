@@ -18,7 +18,14 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('events', {
             url: '/events',
-            templateUrl: 'pages/events.html'
+            templateUrl: 'pages/events/events.html'
+        })
+
+        .state('events.eventsCategory', {
+            url: '/category',
+            templateUrl: 'pages/events/eventsCategory.html',
+
+
         })
 
 
