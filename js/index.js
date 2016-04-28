@@ -66,7 +66,7 @@ $(function () {
     <script src="../../dist/js/bootstrap.min.js"></script>
 
     $('.carousel').carousel({
-        interval: 1000
+        interval: 200
     });
     <script>
     $(document).ready(function(){
