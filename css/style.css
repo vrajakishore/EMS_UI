@@ -55,14 +55,3 @@
     right: 14px;
     z-index: 9;
 }
-
-/* More details on hover */
-.flowingdown {
-
-}
-.more_event_details {
-    display:none
-}
-.flowingdown:hover .more_event_details {
-    display:block
-}

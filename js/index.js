@@ -62,8 +62,15 @@ $(function () {
     $('#showSearchTerm').text($input.val());
     closeSearch()
   });
-   /*Corousel */
-    $('.carousel ').carousel({
+    /*Corousel */
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+    $('.carousel').carousel({
         interval: 1000
-    })
+    });
+    <script>
+    $(document).ready(function(){
+        $('.carousel').carousel()
+        });
+    </script>
 });
