@@ -16,3 +16,7 @@ routerApp.controller('events', function($scope, $http){
         console.log(data);
     });
 });
+
+routerApp.controller('jaffa',function($scope){
+    $scope.name = "jaffa";
+})

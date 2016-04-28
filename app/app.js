@@ -19,18 +19,20 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
     // EVENT STATES AND NESTED VIEWS ========================================
         .state('events', {
             url: '/events',
-            templateUrl: 'pages/events/events.html'
+            templateUrl: 'pages/events/events.html',
+            controller:'events'
         })
 
         .state('events.eventsMovies', {
             url: '/movies',
-            templateUrl: 'pages/events/eventsMovies.html'
+            templateUrl: 'pages/events/eventsMovies.html',
+            controller:'jaffa'
 
         })
         .state('events.eventsStage', {
             url: '/stage',
-            templateUrl: 'pages/events/eventsStage.html',
-            controller:'events'
+            templateUrl: 'pages/events/eventsStage.html'
+
         })
         .state('events.eventsMusic', {
             url: '/music',
