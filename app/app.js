@@ -16,6 +16,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'pages/home.html'
         })
 
+    // EVENT STATES AND NESTED VIEWS ========================================
         .state('events', {
             url: '/events',
             templateUrl: 'pages/events/events.html'
@@ -23,9 +24,19 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('events.eventsCategory', {
             url: '/category',
-            templateUrl: 'pages/events/eventsCategory.html',
-
-
+            templateUrl: 'pages/events/eventsCategory.html'
+        })
+        .state('events.eventsVenue', {
+            url: '/venue',
+            templateUrl: 'pages/events/eventsVenue.html'
+        })
+        .state('events.eventsPerformer', {
+            url: '/performer',
+            templateUrl: 'pages/events/eventsPerformer.html'
+        })
+        .state('events.eventsOrganizer', {
+            url: '/organizer',
+            templateUrl: 'pages/events/eventsOrganizer.html'
         })
 
 
