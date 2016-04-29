@@ -11,8 +11,6 @@ routerApp.controller('events', function($scope, $http){
 
         $scope.first_name = "kishore";
 
-       // $scope.d = data.eventDate;
-
         console.log(data);
     });
 });
