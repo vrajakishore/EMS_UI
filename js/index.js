@@ -62,15 +62,16 @@ $(function () {
     $('#showSearchTerm').text($input.val());
     closeSearch()
   });
-    /*Corousel */
-    <script src="../../dist/js/bootstrap.min.js"></script>
 
-    $('.carousel').carousel({
-        interval: 200
+})
+/*Corousel */
+
+
+$('.carousel').carousel({
+    interval: 200
     });
     <script>
     $(document).ready(function(){
         $('.carousel').carousel()
         });
-    </script>
-});
+    </script>;
