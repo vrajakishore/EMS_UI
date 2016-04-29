@@ -17,24 +17,31 @@ routerApp.controller('events', function($scope, $http){
 
 
 routerApp.controller('dashBoardController', function($scope,$state){
+    $scope.menuLog = "LOGIN";
+    $scope.dashboardPage = "#";
+
+
     $scope.login = function(userid,password){
-
-
-
         if(userid=="kishore@gmail.com"&&password=="kishore"){
             $scope.isLogin = true;
             $scope.menuLog = "LOGGED IN";
+            $scope.dashboardPage = "adminDashboard";
             $state.go('adminDashboard');
             $scope.adminMessage = "Welcome Admin";
+            $scope.dashboard = "DASHBOARD";
+
             console.log(true);
         }
         else{
-            $scope.isLogin = false;
+            $scope.isLogin = true;
 
             $scope.menuLog = "LOGGED IN";
+            $scope.dashboardPage = "userDashboard";
             $state.go('userDashboard');
             $scope.userMessage = "Welcome user";
             //console.log(userid);
+            $scope.dashboard = "DASHBOARD"
+
             console.log(false);
         }
     }
