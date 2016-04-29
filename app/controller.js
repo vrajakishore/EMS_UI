@@ -17,6 +17,22 @@ routerApp.controller('events', function($scope, $http){
     });
 });
 
+
+routerApp.controller('dashBoardController', function($scope,$state){
+    $scope.login = function(userid,password){
+        if(userid=="kishore"&&password=="kishore"){
+            $scope.isLogin = true;
+            $state.go('userDashboard');
+            console.log(true);
+        }
+        else{
+            $scope.isLogin = false;
+            $state.go('userDashboard');
+            console.log(false);
+        }
+    }
+});
+
 routerApp.controller('jaffa',function($scope){
     $scope.name = "jaffa";
 })
