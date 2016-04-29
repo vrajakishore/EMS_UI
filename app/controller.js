@@ -20,16 +20,31 @@ routerApp.controller('events', function($scope, $http){
 
 routerApp.controller('dashBoardController', function($scope,$state){
     $scope.login = function(userid,password){
-        if(userid=="kishore"&&password=="kishore"){
+
+
+
+        if(userid=="kishore@gmail.com"&&password=="kishore"){
             $scope.isLogin = true;
-            $state.go('userDashboard');
+            $scope.menuLog = "LOGGED IN";
+            $state.go('adminDashboard');
+            $scope.adminMessage = "Welcome Admin";
             console.log(true);
         }
         else{
             $scope.isLogin = false;
+
+            $scope.menuLog = "LOGGED IN";
             $state.go('userDashboard');
+            $scope.userMessage = "Welcome user";
+            //console.log(userid);
             console.log(false);
         }
+    }
+
+    $scope.logout = function(){
+        $scope.isLogin = false;
+        $state.go('home');
+        $scope.menuLog = "LOGIN";
     }
 });
 

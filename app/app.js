@@ -49,7 +49,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         })*/
 
     // Dashboard STATES AND NESTED VIEWS ========================================
-        .state('Dashboard', {
+        .state('dashboard', {
             url: '/Dashboard',
             templateUrl: 'pages/dashboard/dashboard.html'
 
@@ -59,6 +59,11 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/userDashboard',
             templateUrl: 'pages/dashboard/userdashboard.html'
 
+        })
+
+        .state('adminDashboard',{
+            url: '/adminDashboard',
+            templateUrl: 'pages/dashboard/admindashboard.html'
         })
 
 });
