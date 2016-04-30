@@ -16,24 +16,25 @@ routerApp.controller('events', function($scope, $http){
 });
 
 
-routerApp.controller('dashBoardController', function($scope,$state,$sce){
+routerApp.controller('dashBoardController', function($rootScope,$scope,$state,$sce){
     $scope.menuLog = "LOGIN";
-    $scope.dashboardPage = "#";
+    //$scope.dashboardPage = "#";
 
-    //$scope.isLogin = false;
+    $rootScope.isLogin = false;
 
     $scope.dashboardfn = function () {
-        if(isLogin){
-            $state.go('dashboard');
+        console.log($rootScope.isLogin)
+        if($rootScope.isLogin){
+            $state.go($rootScope.dashboardPage );
         }
     }
 
 
     $scope.login = function(userid,password){
         if(userid=="kishore@gmail.com"&&password=="kishore"){
-            $scope.isLogin = true;
+            $rootScope.isLogin = true;
             $scope.menuLog = "LOGGED IN";
-            $scope.dashboardPage = "adminDashboard";
+            $rootScope.dashboardPage = "adminDashboard";
             $state.go('adminDashboard');
             $scope.adminMessage = "Welcome Admin";
             $scope.dashboard = "DASHBOARD";
@@ -41,10 +42,10 @@ routerApp.controller('dashBoardController', function($scope,$state,$sce){
             console.log(true);
         }
         else{
-            $scope.isLogin = true;
+            $rootScope.isLogin = true;
 
             $scope.menuLog = "LOGGED IN";
-            $scope.dashboardPage = "userDashboard";
+            $rootScope.dashboardPage = "userDashboard";
             $state.go('userDashboard');
             $scope.userMessage = "Welcome user";
             //console.log(userid);
@@ -60,7 +61,6 @@ routerApp.controller('dashBoardController', function($scope,$state,$sce){
         $scope.menuLog = "LOGIN";
     }
 
-    $scope.htmlPopover = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
 });
 
 routerApp.controller('jaffa',function($scope){
