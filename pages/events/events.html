@@ -57,12 +57,12 @@
 
                             <br>
 
-                            <div uib-popover="{{g.eventCertificate}}
+                            <div uib-popover="{{g.eventCertificate}}<br>
                                     {{g.eventDescription}}
                                     {{g.eventTime}}
                                     {{g.organiser.organiserName}}
                                     {{g.performer.performerFirstName}}
-                                    {{g.performer.performerLastName}}" popover-trigger="mouseenter" ><span class="label label-default">More details</span></div>
+                                    {{g.performer.performerLastName}}" popover-trigger="mouseenter" data-html="true"><span class="label label-default">More details</span></div>
                             <!--<div class="flowingdown">
                                 <span class="label label-default">More details</span>
                                 <div class="more_event_details">
