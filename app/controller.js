@@ -16,9 +16,17 @@ routerApp.controller('events', function($scope, $http){
 });
 
 
-routerApp.controller('dashBoardController', function($scope,$state){
+routerApp.controller('dashBoardController', function($scope,$state,$sce){
     $scope.menuLog = "LOGIN";
     $scope.dashboardPage = "#";
+
+    //$scope.isLogin = false;
+
+    $scope.dashboardfn = function () {
+        if(isLogin){
+            $state.go('dashboard');
+        }
+    }
 
 
     $scope.login = function(userid,password){
@@ -51,8 +59,14 @@ routerApp.controller('dashBoardController', function($scope,$state){
         $state.go('home');
         $scope.menuLog = "LOGIN";
     }
+
+    $scope.htmlPopover = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
 });
 
 routerApp.controller('jaffa',function($scope){
     $scope.name = "jaffa";
+})
+
+routerApp.controller('loginController', function($scope) {
+    
 })
