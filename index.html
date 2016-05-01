@@ -10,8 +10,7 @@
 
     <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
-    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.2.js"></script>
+
     <link rel="stylesheet" href="css/style.css">
 
     <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
@@ -33,7 +32,7 @@
 
 </head>
 
-<body style="padding-top: 50px" ng-controller="dashBoardController">
+<body style="padding-top: 70px" ng-controller="dashBoardController">
 
 <nav class="navbar navbar-inverse navbar-fixed-top effect1">
     <div class="container-fluid">
@@ -51,21 +50,15 @@
         <ul class="nav navbar-nav navbar-right">
             <li><a ui-sref="home"><strong>HOME</strong></a></li>
             <li><a ui-sref="events"><strong>EVENTS</strong></a></li>
-            <li><a ng-click="dashboardfn()"><strong>{{dashboard}}</strong></a></li>
+            <li><a ng-click="dashboardfn()"><strong>DASHBOARD</strong></a></li>
             <li ng-hide="isLogin"><a type="button" data-toggle="modal" data-target="#loginModal"><strong>{{menuLog}}</strong></a></li>
             <li>
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search...">
-						<span class="input-group-btn">
-							<button type="submit" class="btn btn-default">
-								<span class="glyphicon glyphicon-search">
-									<span class="sr-only">Search...</span>
-								</span>
-                            </button>
-						</span>
-                    </div>
-                </form>
+<a>
+                <form class="search-container" action="#">
+                    <input id="search-box" type="text" class="search-box" name="q" />
+                    <label for="search-box"><span class="glyphicon glyphicon-search search-icon"></span></label>
+                    <input type="submit" id="search-submit" />
+                </form></a>
             </li>
         </ul>
     </div><!-- /.navbar-collapse -->

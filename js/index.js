@@ -38,7 +38,7 @@ $(window).scroll(function() {
 */
 
 /*dynamic search bar in index page*/
-$(function () {
+/*$(function () {
   function closeSearch() {
     var $form = $('.navbar-collapse form[role="search"].active')
     $form.find('input').val('');
@@ -63,15 +63,18 @@ $(function () {
     closeSearch()
   });
 
-})
+})*/
 /*Corousel */
 
 
 $('.carousel').carousel({
     interval: 200
     });
-    <script>
+
     $(document).ready(function(){
         $('.carousel').carousel()
         });
-    </script>;
+
+
+/* expandable search bar */
+document.addEventListener("touchstart", function(){}, true);

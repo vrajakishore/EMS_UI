@@ -20,7 +20,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('events', {
             url: '/events',
             templateUrl: 'pages/events/events.html',
-            controller:'events'
+            controller:'eventsCtrl'
         })
 
         .state('events.eventsMovies', {
@@ -57,13 +57,20 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('userDashboard', {
             url: '/userDashboard',
-            templateUrl: 'pages/dashboard/userdashboard.html'
+            templateUrl: 'pages/dashboard/user/userdashboard.html',
+            //controller:'dashboardCtrl'
 
         })
 
+        .state('userDashboard.AccountSetting', {
+            url: '/userAccountSetting',
+            templateUrl: 'pages/dashboard/user/userAccountSetting.html'
+            //controller:'dashboardCtrl'
+
+        })
         .state('adminDashboard',{
             url: '/adminDashboard',
-            templateUrl: 'pages/dashboard/admindashboard.html'
+            templateUrl: 'pages/dashboard/admin/admindashboard.html'
         })
 
 });
