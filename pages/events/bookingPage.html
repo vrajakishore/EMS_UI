@@ -1,0 +1,69 @@
+
+<div class="row"> <div class="col-md-6"><br><br><div class="col-md-6"><br><br></div></div></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 text-justify">
+            <!--    for image n other details-->
+            <div class="row">
+                <div class="col-md-6">
+                    <img data-ng-src="{{detailedEvent.album.photoCollections[0].photoUrl}}"  height="300" width="400" >
+                </div>
+                <div class="col-md-6">
+                    <h2>{{detailedEvent.eventName}}</h2><br>
+                    <h4><span class="glyphicon glyphicon-map-marker"> </span>
+                        <b>Venue:</b></h4> <h4> Ramanbaug, Pune, India </h4><br>
+
+                    <h4><span class="glyphicon glyphicon-star"> </span>
+                        <b>Rating:</b></h4> <h4>4.5</h4>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+    <!-- for description-->
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+            <h3>Select Ticket Type:
+                <select ng-model="selectedTicketType" ng-change = "getAmount(selectedTicketType,ticketCount)">
+                    <option value="">-select-</option>
+                    <option ng-repeat="t in detailedEvent.tickettype" value={{t.ticketType}}>{{t.ticketType}}</option>
+                </select>
+                <br><div ng-if="availableTickets>0">
+                    Number of Tickets:<select ng-model="ticketCount" ng-change="getAmount(selectedTicketType,ticketCount)">
+                    <option value="">-select-</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                </select>
+                    <br>
+                    <h3>Total Cost : {{amount}}</h3>
+                    <button ng-click="payNow()" class="btn btn-info">Pay Now</button>
+                </div></h3>
+        </div>
+        <div class="col-md-4  well well-white" align="center">
+            <h3>Hurry up!!! Book Your Ticket Now</h3>
+            <table border="1">
+                <tr>
+                    <th>Ticket Type</th>
+                    <th>Price</th>
+                    <th>Tickets available</th>
+                </tr>
+                <tr ng-repeat="ticket in detailedEvent.tickettype">
+                    <td class="text-center">{{ticket.ticketType}}</td>
+                    <td class="text-center">{{ticket.price}}</td>
+                    <td class="text-center">{{ticket.availableSeats}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+
+</div>
+
