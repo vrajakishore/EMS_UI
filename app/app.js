@@ -48,6 +48,10 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/sports',
             templateUrl: 'pages/events/eventsSports.html'
         })
+        .state('events.eventsSearch',{
+            url:'/Search',
+            templateUrl:'pages/events/search.html'
+        })
 
         /*.state('dash', {
             url: '/dash',
