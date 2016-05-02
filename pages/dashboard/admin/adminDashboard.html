@@ -1,1 +1,28 @@
-<h1>Admin DashBoard</h1>
+
+
+<div class="col-lg-3">
+    <h1>Admin DashBoard</h1>
+
+    <ul class="nav navbar-nav">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{adminMessage}} <span class="glyphicon glyphicon-user pull-right"></span></a>
+            <ul class="dropdown-menu">
+                <li><a ui-sref=".adminAccountSetting">Account Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+                <li class="divider"></li>
+                <li><a ui-sref=".adminTransaction">Transaction History <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
+                <li class="divider"></li>
+                <li><a ui-sref=".adminUpcomingEvents">Upcoming Events <span class="badge pull-right"> </span></a></li>
+                <li class="divider"></li>
+                <li><a ui-sref=".adminProfile">Profile <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
+                <li class="divider"></li>
+                <li><a type="button" ng-click="logout()" >Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="col-lg-8">
+
+    <div ui-view></div>
+
+</div>
