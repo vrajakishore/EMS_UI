@@ -81,6 +81,11 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/adminAccountSetting',
             templateUrl: 'pages/dashboard/admin/adminAccountSetting.html'
         })
+        .state('feedback',{
+        url: '/feedback',
+        templateUrl:'pages/feedback.html'
+
+    })
 
 });
 
