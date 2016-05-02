@@ -13,6 +13,12 @@ routerApp.controller('eventsCtrl', function($scope, $http){
 
         console.log(data);
     });
+
+    $scope.goBack = function(){
+
+        console.log("asdfasasd");
+        $state.go('events');
+    }
 });
 
 
@@ -75,6 +81,8 @@ routerApp.controller('dashBoardController', function($rootScope,$scope,$state,$s
             { type: 'success', msg: 'Well done! You have been successfully logged out.' }
         ];
     }
+
+
 
 
 });

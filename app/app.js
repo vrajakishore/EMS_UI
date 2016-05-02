@@ -23,6 +23,12 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             controller:'eventsCtrl'
         })
 
+        .state('events.eventDetails', {
+            url: '/eventsDetails',
+            templateUrl: 'pages/events/eventDetails.html',
+
+        })
+
         .state('events.eventsMovies', {
             url: '/movies',
             templateUrl: 'pages/events/eventsMovies.html',
