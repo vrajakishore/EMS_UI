@@ -63,9 +63,15 @@ routerApp.controller('dashBoardController', function($scope,$location,$state,$st
     }
 
 
-    $scope.login = function(userid,password){
-        if(userid=="kishore@gmail.com"&&password=="kishore"){
+    $scope.login = function(userDetails){
+
+        console.log(userDetails);
+
+        $rootScope.uid = userDetails.userid;
+
+        if(userDetails.userid=="kishore@gmail.com"&&userDetails.password=="kishore"){
             $rootScope.isLogin = true;
+
 
 
             $scope.menuLog = "LOGGED IN";

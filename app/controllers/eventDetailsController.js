@@ -8,7 +8,7 @@ routerApp.controller('eventDetailsController', function($scope,$location,$state,
     console.log($stateParams.myParam  +" "+$rootScope.isLogin);
 
     $rootScope.currentLocation = $location.path();
-    console.log($rootScope.currentLocation+" "+$stateParams.myParam.eventId );
+    console.log($rootScope.currentLocation+" "+$stateParams.myParam.eventId +" "+$rootScope.uid);
 
     /*if($stateParams.myParam!=null) {
         $rootScope.eventId = $stateParams.myParam;
