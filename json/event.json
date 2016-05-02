@@ -4,7 +4,7 @@
   "eventName" : "Comic Con",
   "eventDate" : "23-Mar-2010",
   "eventCertificate" : "UA",
-  "eventDescription" : "The biggest comic summit comiing to India...Lets roll comic fans",
+  "eventDescription" : "America events",
   "capacity" : {
     "capacityId" : 1,
     "silverCapacity" : 200,
@@ -17,7 +17,7 @@
   "eventTime" : "18:00:00 IST",
   "organiser" : {
     "organiserId" : 1,
-    "organiserName" : "Abhishek"
+    "organiserName" : "Kishore"
   },
   "price" :{
     "priceId" : 1,
@@ -28,7 +28,7 @@
   "venue" : {
     "venueId" : 1,
     "venueName" : "Central   Mall",
-    "venueCity" : "Pune"
+    "venueCity" : "Hyderabad"
   },
   "performer" : {
     "performerId" : 1 ,
@@ -44,7 +44,7 @@
   "eventImageUrl" : "comic_con.jpg"
 },
   {
-    "eventId" : 1,
+    "eventId" : 2,
     "eventName" : "asdasda",
     "eventDate" : "24-Mar-2010",
     "eventCertificate" : "UA",
