@@ -20,12 +20,15 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('events', {
             url: '/events',
             templateUrl: 'pages/events/events.html',
+  /*          params: {myParam: null},*/
             controller:'eventsCtrl'
         })
 
         .state('events.eventDetails', {
             url: '/eventsDetails',
+            params:{myParam: null},            //EVENT_ID is the parameter
             templateUrl: 'pages/events/eventDetails.html',
+            controller:'eventDetailsController'
 
         })
 

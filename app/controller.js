@@ -3,26 +3,53 @@
  */
 
 
-routerApp.controller('eventsCtrl', function($scope, $http){
+routerApp.controller('eventsCtrl', function($rootScope,$scope,SearchService, $http,$state){
     //console.log("controdadsa");
-
-    $http.get('json/event.json').success(function (data){
+    $scope.url = 'json/event.json';
+    SearchService(callBackForAllEvents,$scope.url);
+    
+    function callBackForAllEvents(data) {
         $scope.event_data = data;
+
+        //$rootScope.eventID = data.eventId;
+        //console.log( data.eventId+" hi");
 
         $scope.first_name = "kishore";
 
         console.log(data);
-    });
+    }
+    
+   /* $http.get('json/event.json').success(function (data){
+        $scope.event_data = data;
 
-    $scope.goBack = function(){
+        //$rootScope.eventID = data.eventId;
+        //console.log( data.eventId+" hi");
+
+        $scope.first_name = "kishore";
+
+        console.log(data);
+    });*/
+
+    $scope.eventDetails = function (g) {
+
+        //console.log($rootScope.eventId+" this is eventID")
+        console.log(g)
+        $state.go('.eventDetails',  {myParam:g});
+
+        
+    }
+        
+
+
+    /*$scope.goBack = function(){
 
         console.log("asdfasasd");
         $state.go('events');
-    }
+    }*/
 });
 
 
-routerApp.controller('dashBoardController', function($rootScope,$scope,$state,$sce,$window){
+routerApp.controller('dashBoardController', function($scope,$location,$state,$stateParams,$rootScope,SearchService,$http){
     $scope.menuLog = "LOGIN";
     //$scope.dashboardPage = "#";
 

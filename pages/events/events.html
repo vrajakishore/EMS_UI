@@ -24,38 +24,24 @@
 
     <div ui-view>
         <h1>All Events</h1>
-        <div id="tour" class="bg-1" ng-repeat="g in event_data">
+        <div id="tour" class="bg-1">
             <div class="container-fluid">
                 <div class="row text-center">
 
-                    <div class="col-sm-4">
-                        <div class="thumbnail">
-                            <img src="images/ARIJIT%20SMALL.jpg" alt="Mumbai" width="400" height="300">
-                            <p><strong>MUMBAI</strong></p>
-                            <p>Sunday 15 May 2016</p>
-                            <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="thumbnail">
-                            <img src="images/ARIJIT%20SMALL.jpg" alt="Mumbai" width="400" height="300">
-                            <p><strong>MUMBAI</strong></p>
-                            <p>Sunday 15 May 2016</p>
-                            <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
-                        </div>
-                    </div>
 
-                    <div class="col-sm-4">
-                        <div class="thumbnail">
+
+                    <div class="col-sm-4" ng-repeat="g in event_data">
+                        <div class="thumbnail" >
                             <div class="row pull-left"><span class="label label-danger">{{g.Category.categoryType}}</span></div>
                             <img src="{{g.eventImageUrl}}" alt="{{g.venue.venueCity}}" width="400" height="300">
-
+                            <span class="label-danger">{{g.eventId}}</span>
                             <p><strong>{{g.venue.venueCity}}</strong></p>
 
                             <p>{{g.eventDate}}</p>
                             <!--<button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>-->
 
-                            <a ui-sref=".eventDetails"><strong>Book/Details</strong></a>
+                           <!-- <a ui-sref=".eventDetails"><strong>Book/Details</strong></a>-->
+                            <button ui-sref=".eventDetails({myParam: g})" class="btn-default">Book/Details</button>
 
                             <br>
 
