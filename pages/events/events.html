@@ -48,37 +48,25 @@
                     <div class="col-sm-4">
                         <div class="thumbnail">
                             <div class="row pull-left"><span class="label label-danger">{{g.Category.categoryType}}</span></div>
-                            <img src="{{g.eventImageUrl}}" alt="Mumbai" width="400" height="300">
+                            <img src="{{g.eventImageUrl}}" alt="{{g.venue.venueCity}}" width="400" height="300">
 
                             <p><strong>{{g.venue.venueCity}}</strong></p>
 
                             <p>{{g.eventDate}}</p>
-                            <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+                            <!--<button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>-->
+
+                            <a ui-sref=".eventDetails"><strong>Book/Details</strong></a>
 
                             <br>
 
-                            <div uib-popover="{{g.eventCertificate}}
+                            <!--<div uib-popover="{{g.eventCertificate}}
                                     {{g.eventDescription}}
                                     {{g.eventTime}}
                                     {{g.organiser.organiserName}}
                                     {{g.performer.performerFirstName}}
-                                    {{g.performer.performerLastName}}" popover-trigger="mouseenter" data-html="true"><span class="label label-default">More details</span></div>
-                            <!--<div class="flowingdown">
-                                <span class="label label-default">More details</span>
-                                <div class="more_event_details">
-                                    <button uib-popover="I appeared on mouse enter {{g.eventCertificate}}!" popover-trigger="mouseenter" type="button" class="btn btn-default">Mouseenter</button>
-
-                                    <p>{{g.eventCertificate}}</p>
-                                    <p>{{g.eventDescription}}</p>
-                                    {{g.eventTime}}
-                                    {{g.organiser.organiserName}}
-
-                                    {{g.performer.performerFirstName}}
-                                    {{g.performer.performerLastName}}
-
-                                    {{g.Category.categoryType}}
-                                </div>
+                                    {{g.performer.performerLastName}}" popover-trigger="mouseenter" data-html="true"><span class="label label-default">More details</span>
                             </div>-->
+
                         </div>
                     </div>
 
