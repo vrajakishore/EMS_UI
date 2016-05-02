@@ -10,6 +10,10 @@ routerApp.controller('eventDetailsController', function($scope,$location,$state,
     $rootScope.currentLocation = $location.path();
     console.log($rootScope.currentLocation+" "+$stateParams.myParam.eventId +" "+$rootScope.uid);
 
+    $scope.SelectedEventDetails = [$stateParams.myParam];
+
+    console.log($scope.SelectedEventDetails);
+
     /*if($stateParams.myParam!=null) {
         $rootScope.eventId = $stateParams.myParam;
         $scope.commentTextOnEvent='';

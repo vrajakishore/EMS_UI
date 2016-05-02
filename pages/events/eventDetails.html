@@ -1,15 +1,27 @@
 
 
-<button class="btn-default" ui-sref="events"><strong>back</strong></button>
-<!--<div ng-repeat="g in event_data">
-{{g.eventCertificate}}
-{{g.eventDescription}}
-{{g.eventTime}}
-{{g.organiser.organiserName}}
-{{g.performer.performerFirstName}}
-{{g.performer.performerLastName}}</div>-->
+<!--<button class="btn-default" ui-sref="events"><strong>back</strong></button>-->
+
 
 <div class="container">
+
+   <!-- <div ng-repeat="g in event_data">
+        {{g.eventCertificate}}
+        {{g.eventDescription}}
+        {{g.eventTime}}
+        {{g.organiser.organiserName}}
+        {{g.performer.performerFirstName}}
+        {{g.performer.performerLastName}}</div>-->
+    hhhhh
+    <div ng-repeat="a in SelectedEventDetails">
+    {{a.eventCertificate}}
+        {{a.eventDescription}}
+        {{a.eventTime}}
+        {{a.organiser.organiserName}}
+        {{a.performer.performerFirstName}}
+        {{a.performer.performerLastName}}
+    </div>
+
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10 text-justify">

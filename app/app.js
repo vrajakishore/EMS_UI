@@ -32,6 +32,13 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         })
 
+        .state('events.bookNow',{
+            url : '/bookNow',
+            templateUrl : 'pages/events/bookingPage.html',
+            controller : 'BookingPageController'
+        })
+
+
         .state('events.eventsMovies', {
             url: '/movies',
             templateUrl: 'pages/events/eventsMovies.html',
