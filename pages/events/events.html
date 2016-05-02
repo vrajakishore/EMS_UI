@@ -1,22 +1,22 @@
 
 
 
-    <div class="col-lg-2">
-        <div id="sidebar" class="well sidebar-nav affix">
-            <h5><i class="glyphicon glyphicon-home"></i>
-                <small><b>Events</b></small>
-            </h5>
-            <ul class="nav nav-pills nav-stacked">
+<div class="col-lg-2">
+    <div id="sidebar" class="well sidebar-nav affix">
+        <h5><i class="glyphicon glyphicon-home"></i>
+            <small><b>Events</b></small>
+        </h5>
+        <ul class="nav nav-pills nav-stacked">
 
-                <li><a ui-sref=".eventsMovies">Movies</a></li>
-                <li><a ui-sref=".eventsSports">Sports</a></li>
-                <li><a ui-sref=".eventsMusic">Music</a></li>
-                <li><a ui-sref=".eventsStage">Stage Events</a></li>
-                <li><a ui-sref=".eventsSearch">Search</a></li>
-            </ul>
+            <li><a ui-sref=".eventsMovies">Movies</a></li>
+            <li><a ui-sref=".eventsSports">Sports</a></li>
+            <li><a ui-sref=".eventsMusic">Music</a></li>
+            <li><a ui-sref=".eventsStage">Stage Events</a></li>
+            <li><a ui-sref=".eventsSearch">Search</a></li>
+        </ul>
 
-        </div>
     </div>
+</div>
 
 
 
@@ -24,28 +24,13 @@
 
     <div ui-view>
         <h1>All Events</h1>
-        <div id="tour" class="bg-1" ng-repeat="g in event_data">
-            <div class="container-fluid">
-                <div class="row text-center">
+        <div id="tour" class="bg-1">
+            <div class="container-fluid" >
+                <div class="row text-center" >
 
-                    <div class="col-sm-4">
-                        <div class="thumbnail">
-                            <img src="images/ARIJIT%20SMALL.jpg" alt="Mumbai" width="400" height="300">
-                            <p><strong>MUMBAI</strong></p>
-                            <p>Sunday 15 May 2016</p>
-                            <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="thumbnail">
-                            <img src="images/ARIJIT%20SMALL.jpg" alt="Mumbai" width="400" height="300">
-                            <p><strong>MUMBAI</strong></p>
-                            <p>Sunday 15 May 2016</p>
-                            <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
-                        </div>
-                    </div>
 
-                    <div class="col-sm-4">
+
+                    <div class="col-sm-4" ng-repeat="g in event_data">
                         <div class="thumbnail">
                             <div class="row pull-left"><span class="label label-danger">{{g.Category.categoryType}}</span></div>
                             <img src="{{g.eventImageUrl}}" alt="{{g.venue.venueCity}}" width="400" height="300">
@@ -53,9 +38,9 @@
                             <p><strong>{{g.venue.venueCity}}</strong></p>
 
                             <p>{{g.eventDate}}</p>
-                            <!--<button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>-->
+                            <button class="btn" data-toggle="modal" data-target="#modal{{g.eventId}}">Buy Tickets</button>
 
-                            <a ui-sref=".eventDetails"><strong>Book/Details</strong></a>
+                            <!--<a ui-sref=".eventDetails"><strong>Book/Details</strong></a>-->
 
                             <br>
 
@@ -67,54 +52,314 @@
                                     {{g.performer.performerLastName}}" popover-trigger="mouseenter" data-html="true"><span class="label label-default">More details</span>
                             </div>-->
 
+
+
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal{{g.eventId}}" role="dialog">
+                            <div class="modal-dialog modal-lg ">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                        <h4><span class="glyphicon glyphicon-lock"></span> Events Details and Booking</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10 text-justify">
+                                                <!--    for image n other details-->
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <img data-ng-src="{{detailedEvent.album.photoCollections[0].photoUrl}}"  height="150" width="200" >
+                                                    </div>
+                                                    <div class="col-md-4 ">
+                                                        <!--<h2>{{detailedEvent.eventId}}</h2><br>-->
+                                                        <h2>{{g.eventName}}</h2>
+                                                        <h4><span class="glyphicon glyphicon-map-marker"> </span>
+                                                            <b>Venue:</b></h4> <h4> {{g.venue.venueName}}, {{g.venue.venueCity}}, India </h4><br>
+                                                        <!--<h4><span class="glyphicon glyphicon-star"> </span>
+                                                            <b>Rating:</b></h4> &lt;!&ndash;<h4>{{detailedEvent.avgRating}}</h4>&ndash;&gt;
+                                                        <a ui-sref="bookNow" class="btn btn-info">Book Now</a>-->
+                                                    </div>
+                                                    <!--<div class="col-md-2"><br><br><br><br><br><br>
+                                                        <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span> &nbsp;&nbsp;{{ratingOf5}}<br>
+                                                        <span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span>&nbsp;&nbsp;{{ratingOf4}}<br>
+                                                        <span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span>&nbsp;&nbsp;{{ratingOf3}}<br>
+                                                        <span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span>&nbsp;&nbsp;{{ratingOf2}}<br>
+                                                        <span class="glyphicon glyphicon-star"> </span>&nbsp;&nbsp;{{ratingOf1}}
+                                                    </div>-->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+                                        <br><br>
+                                        <!-- for description & Schedule-->
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class=" col-md-6 text-justify"><!-- for description-->
+                                                <h3 class="text-left">Description:</h3><br>
+                                                <p>{{g.eventDescription}}</p>
+                                            </div>
+                                            <div class="col-md-4 well well-lg"><!-- for Schedule-->
+                                                <h3 align="center">Schedule</h3>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <span class="badge">{{g.eventTime}}</span>
+                                                        <span class="badge">on</span>
+                                                        <span class="badge">{{g.eventDate}}</span>
+                                                        {{timings.date}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+                                        <br>
+                                        <!--performers-->
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <div class="col-md-4">
+                                                    <div  align="center">
+                                                        <!--<img class="img-circle" data-ng-src="{{performer.performerFirstName}}" alt="Performer Image" width="200px" height="200px"><br>-->
+                                                        <strong>{{g.performer.performerFirstName}}&nbsp;&nbsp;&nbsp;{{g.performer.performerLastName}}</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+
+
+                                        <!--Rating-->
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <div ng-init="rating = 0"><h4>Give your Rating : <uib-rating ng-model="rating" ng-change="sendRating(rating)" max="5" state-on="'glyphicon-star'" state-off="'glyphicon-star-empty'" aria-labelledby="custom-icons-1"></uib-rating> <b>(<i>Rate:</i> {{rating}})</b></h4></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--comments-->
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-10">
+                                            <div class="post-comments">
+
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="comment">Your Comment</label>
+                                                        <textarea name="comment" id="comment" class="form-control" rows="3" ng-model="commentTextOnEvent" required></textarea>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-default" ng-disabled="commentTextOnEvent.length==0" ng-click="commentOnEvent(detailedEvent.eventId,commentTextOnEvent)">Comment</button>
+                                                </form>
+                                                <br/>
+                                                <strong>There are {{comments.length}} comments</strong>
+                                                <br/>
+                                                <div class="row" ng-repeat="c in comments">
+
+                                                    <div class="media">
+                                                        <!-- first comment -->
+
+                                                        <div class="media-heading">
+                                                            <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#{{((comments.indexOf(c)+1)*12345)+2}}" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+                                                        </div>
+
+                                                        <div class="panel-collapse collapse in" id={{((comments.indexOf(c)+1)*12345)+2}}>
+
+                                                            <!--  <div class="media-left">
+                                                                  <div class="vote-wrap">
+                                                                      <div class="save-post">
+                                                                          <a href="#"><span class="glyphicon glyphicon-star" aria-label="Save"></span></a>
+                                                                      </div>
+                                                                      <div class="vote up">
+                                                                          <i class="glyphicon glyphicon-menu-up"></i>
+                                                                      </div>
+                                                                      <div class="vote inactive">
+                                                                          <i class="glyphicon glyphicon-menu-down"></i>
+                                                                      </div>
+                                                                  </div>
+                                                                  &lt;!&ndash; vote-wrap &ndash;&gt;
+                                                              </div>-->
+                                                            <!-- media-left -->
+
+
+                                                            <div class="media-body">
+                                                                <p><small><cite><i>@{{c.user.firstName}}</i></cite></small><br>{{c.commentText}}</p>
+                                                                <div class="comment-meta">
+              <span>
+                        <span class="" role="button" data-toggle="collapse" href=#{{comments.indexOf(c)+1}} aria-expanded="false" aria-controls="collapseExample"><strong style="color:blue">Reply</strong></span>
+                      </span>
+                                                                    <div class="collapse" id={{comments.indexOf(c)+1}}>
+                                                                        <form>
+                                                                            <div class="form-group">
+                                                                                <label for="reply1">Your Reply</label>
+                                                                                <textarea name="reply1" id="reply1" class="form-control" rows="3" ng-model="replyText1" required></textarea>
+                                                                            </div>
+                                                                            <button type="submit" class="btn btn-default"  ng-disabled="replyText1.length==0" ng-click="sendReply(c.commentId,replyText1)">Reply</button>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- comment-meta -->
+                                                                Number of replies : {{c.replies.length}}
+                                                                <div class="media">
+                                                                    <!-- answer to the first comment -->
+
+                                                                    <div class="media-heading">
+                                                                        <button class="btn btn-default btn-collapse btn-xs" type="button" data-toggle="collapse" data-target=#{{((comments.indexOf(c)+2)*1000)+c.replies.indexOf(reply)+1}} aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+                                                                    </div>
+
+                                                                    <div class="panel-collapse collapse in" id={{((comments.indexOf(c)+2)*1000)+c.replies.indexOf(reply)+1}}>
+
+                                                                        <!-- <div class="media-left">
+                                                                             <div class="vote-wrap">
+                                                                                 <div class="save-post">
+                                                                                     <a href="#"><span class="glyphicon glyphicon-star" aria-label="Save"></span></a>
+                                                                                 </div>
+                                                                                 <div class="vote up">
+                                                                                     <i class="glyphicon glyphicon-menu-up"></i>
+                                                                                 </div>
+                                                                                 <div class="vote inactive">
+                                                                                     <i class="glyphicon glyphicon-menu-down"></i>
+                                                                                 </div>
+                                                                             </div>
+                                                                             &lt;!&ndash; vote-wrap &ndash;&gt;
+                                                                         </div>-->
+                                                                        <!-- media-left -->
+
+                                                                        <div ng-repeat="reply in c.replies">
+                                                                            <div class="media-body" >
+                                                                                <p><small><cite><i>@{{reply.user.firstName}}</i></cite></small><br>{{reply.replyText}}</p>
+                                                                                <!--<p>{{reply.user.firstName}}<br>{{reply.replyText}}</p>-->
+                                                                                <div class="comment-meta">
+                            <span>
+                              <span class="" role="button" data-toggle="collapse" href=#{{((comments.indexOf(c)+1)*1000)+c.replies.indexOf(reply)}} aria-expanded="false" aria-controls="collapseExample"><strong style="color:blue">Reply</strong></span>
+                            </span>
+                                                                                    <div class="collapse" id={{((comments.indexOf(c)+1)*1000)+c.replies.indexOf(reply)}}>
+                                                                                        <form>
+                                                                                            <div class="form-group">
+                                                                                                <label for="reply2">Your Reply</label>
+                                                                                                <textarea name="reply2" id="reply2" class="form-control" rows="3" ng-model="replyText2" required></textarea>
+                                                                                            </div>
+                                                                                            <button type="submit" class="btn btn-default" ng-disabled="replyText2.length==0" ng-click="sendReply(c.commentId,replyText2)">Reply</button>
+                                                                                        </form>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- comment-meta -->
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- comments -->
+
+                                                                </div>
+                                                                <!-- answer to the first comment -->
+
+                                                            </div>
+                                                        </div>
+                                                        <!-- comments -->
+
+                                                    </div>
+                                                    <!-- first comment -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-1"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-10"><h4><b>Contact us :</b></h4></div>
+                                        <div class="col-md-1"></div>
+                                    </div>
+
+                                   <!-- <div class="row" ng-repeat="contact in detailedEvent.contact">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-10">
+                                            <li><i>{{contact.contactType}} : {{contact.value}}</i></cite></small></li>
+                                        </div>
+                                        <div class="col-md-1">
+
+                                        </div>
+                                    </div>-->
+
+                                    <p>{{g.eventCertificate}}
+                                        {{g.eventDescription}}
+                                        {{g.eventTime}}
+                                        {{g.organiser.organiserName}}
+                                        {{g.performer.performerFirstName}}
+                                        {{g.performer.performerLastName}}</p>
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, Rs. 2000 per person</label>
+                                            <input type="number" class="form-control" id="psw" placeholder="How many?">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+                                            <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                                        </div>
+                                        <button type="submit" class="btn btn-block">Pay
+                                            <span class="glyphicon glyphicon-ok"></span>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                                        <span class="glyphicon glyphicon-remove"></span> Cancel
+                                    </button>
+                                    <p>Need <a href="#">Help?</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-
                 </div>
-
-
-
-
 
 
             </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
 
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">×</button>
-                            <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
-                        </div>
-                        <div class="modal-body">
-                            <form role="form">
-                                <div class="form-group">
-                                    <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, Rs. 2000 per person</label>
-                                    <input type="number" class="form-control" id="psw" placeholder="How many?">
-                                </div>
-                                <div class="form-group">
-                                    <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
-                                    <input type="text" class="form-control" id="usrname" placeholder="Enter email">
-                                </div>
-                                <button type="submit" class="btn btn-block">Pay
-                                    <span class="glyphicon glyphicon-ok"></span>
-                                </button>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-                                <span class="glyphicon glyphicon-remove"></span> Cancel
-                            </button>
-                            <p>Need <a href="#">Help?</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+
+
         </div>
 
+        <!-- Modal -->
+        <!--<div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                &lt;!&ndash; Modal content&ndash;&gt;
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, Rs. 2000 per person</label>
+                                <input type="number" class="form-control" id="psw" placeholder="How many?">
+                            </div>
+                            <div class="form-group">
+                                <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+                                <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                            </div>
+                            <button type="submit" class="btn btn-block">Pay
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove"></span> Cancel
+                        </button>
+                        <p>Need <a href="#">Help?</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>-->
     </div>
+
+</div>
 </div>
