@@ -52,7 +52,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('userDashboard', {
             url: '/userDashboard',
-            templateUrl: 'pages/dashboard/user/userdashboard.html',
+            templateUrl: 'pages/dashboard/user/userdashboard.html'
             //controller:'dashboardCtrl'
 
         })
@@ -63,6 +63,15 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             //controller:'dashboardCtrl'
 
         })
+
+        .state('userDashboard.userUpcomingEvents', {
+            url: '/userUpcomingEvents',
+            templateUrl: 'pages/dashboard/user/userUpcomingEvents.html'
+            //controller:'dashboardCtrl'
+
+        })
+
+
         .state('adminDashboard',{
             url: '/adminDashboard',
             templateUrl: 'pages/dashboard/admin/adminDashboard.html'
