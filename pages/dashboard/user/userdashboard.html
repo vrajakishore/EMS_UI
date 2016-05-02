@@ -21,6 +21,9 @@
 
 <div class="col-lg-8">
 
-    <div ui-view></div>
+    <div ui-view>
+        <br><br>
+        <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+    </div>
 
 </div>

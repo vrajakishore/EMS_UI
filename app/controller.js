@@ -33,13 +33,19 @@ routerApp.controller('dashBoardController', function($rootScope,$scope,$state,$s
     $scope.login = function(userid,password){
         if(userid=="kishore@gmail.com"&&password=="kishore"){
             $rootScope.isLogin = true;
+
+
             $scope.menuLog = "LOGGED IN";
             $rootScope.dashboardPage = "adminDashboard";
             $state.go('adminDashboard');
             $scope.adminMessage = "Welcome Admin";
             $scope.dashboard = "DASHBOARD";
-
             console.log(true);
+
+            /*Login success for admin*/
+            $scope.alerts = [
+                { type: 'success', msg: 'Well done! You successfully logged in Admin.' }
+            ];
         }
         else{
             $rootScope.isLogin = true;
@@ -49,9 +55,14 @@ routerApp.controller('dashBoardController', function($rootScope,$scope,$state,$s
             $state.go('userDashboard');
             $scope.userMessage = "Welcome user";
             //console.log(userid);
-            $scope.dashboard = "DASHBOARD"
-
+            $scope.dashboard = "DASHBOARD";
             console.log(false);
+
+
+            /* login success for user */
+            $scope.alerts = [
+                { type: 'success', msg: 'Well done! You successfully logged in user.' }
+            ];
         }
     }
 
@@ -59,48 +70,16 @@ routerApp.controller('dashBoardController', function($rootScope,$scope,$state,$s
         $rootScope.isLogin = false;
         $state.go('home');
         $scope.menuLog = "LOGIN";
+
+        $scope.alerts = [
+            { type: 'success', msg: 'Well done! You have been successfully logged out.' }
+        ];
     }
 
-    $scope.tabs = [
-        { title:'Dynamic Title 1', content:'Dynamic content 1' },
-        { title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
-    ];
-
-    $scope.alertMe = function() {
-        setTimeout(function() {
-            $window.alert('You\'ve selected the alert tab!');
-        });
-    };
-
-    $scope.model = {
-        name: 'Tabs'
-    };
 
 });
-
-routerApp.controller('dashboardCtrl',function ($scope, $window) {
-    $scope.tabs = [
-        { title:'Dynamic Title 1', content:'Dynamic content 1' },
-        { title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
-    ];
-
-    $scope.alertMe = function() {
-        setTimeout(function() {
-            $window.alert('You\'ve selected the alert tab!');
-        });
-    };
-
-    $scope.model = {
-        name: 'Tabs'
-    };
-
-
-})
 
 routerApp.controller('jaffa',function($scope){
     $scope.name = "jaffa";
 })
 
-routerApp.controller('loginController', function($scope) {
-    
-})
