@@ -1,48 +1,49 @@
 [
   {
-  "eventId" : 1,
-  "eventName" : "Comic Con",
-  "eventDate" : "23-Mar-2010",
-  "eventCertificate" : "UA",
-  "eventDescription" : "America events",
-  "capacity" : {
-    "capacityId" : 1,
-    "silverCapacity" : 200,
-    "goldCapacity" : 100,
-    "platinumCapacity" : 50,  "silverCurrentCapacity" : 200,
-    "goldCurrentCapacity" : 100,
-    "platinumCurrentCapacity" : 50
-  },
-  "eventStatus" : "Approved",
-  "eventTime" : "18:00:00 IST",
-  "organiser" : {
-    "organiserId" : 1,
-    "organiserName" : "Kishore"
-  },
-  "price" :{
-    "priceId" : 1,
-    "priceGold" : "800.00",
-    "priceSilver" : "500.00",
-    "pricePlatinum" : "1000.0"
-  },
-  "venue" : {
-    "venueId" : 1,
-    "venueName" : "Central   Mall",
-    "venueCity" : "Hyderabad"
-  },
-  "performer" : {
-    "performerId" : 1 ,
-    "performerFirstName" : "Christian",
-    "performerLastName" : "Bale",
-    "performerDOB" : "27-Mar-1985"
-  },
-  "Category":{
-    "categoryId" : "1",
-    "categoryName" : "Events",
-    "categoryType" : "PAID"
-  },
-  "eventImageUrl" : "comic_con.jpg"
-},
+    "eventId" : 1,
+    "eventName" : "Comic Con",
+    "eventDate" : "23-Mar-2010",
+    "eventCertificate" : "UA",
+    "eventDescription" : "America events",
+    "capacity" : {
+      "capacityId" : 1,
+      "silverCapacity" : 200,
+      "goldCapacity" : 100,
+      "platinumCapacity" : 50,
+      "silverCurrentCapacity" : 200,
+      "goldCurrentCapacity" : 100,
+      "platinumCurrentCapacity" : 50
+    },
+    "eventStatus" : "Approved",
+    "eventTime" : "18:00:00 IST",
+    "organiser" : {
+      "organiserId" : 1,
+      "organiserName" : "Kishore"
+    },
+    "price" :{
+      "priceId" : 1,
+      "priceGold" : "800.00",
+      "priceSilver" : "500.00",
+      "pricePlatinum" : "1000.0"
+    },
+    "venue" : {
+      "venueId" : 1,
+      "venueName" : "Central   Mall",
+      "venueCity" : "Hyderabad"
+    },
+    "performer" : {
+      "performerId" : 1 ,
+      "performerFirstName" : "Christian",
+      "performerLastName" : "Bale",
+      "performerDOB" : "27-Mar-1985"
+    },
+    "Category":{
+      "categoryId" : "1",
+      "categoryName" : "Events",
+      "categoryType" : "PAID"
+    }},
+
+
   {
     "eventId" : 2,
     "eventName" : "asdasda",
@@ -84,7 +85,9 @@
       "categoryId" : "1",
       "categoryName" : "Events",
       "categoryType" : "FREE"
-    },
-    "eventImageUrl" : "comic_con.jpg"
+    }
+
+
   }
-]
+  ]
+

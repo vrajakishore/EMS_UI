@@ -1,3 +1,6 @@
+
+
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -43,7 +46,7 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-
+<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
 <!-- Container (The Band Section) -->
 <div id="band" class="container text-center">
     <h3>BOOK MY EVENT</h3>
