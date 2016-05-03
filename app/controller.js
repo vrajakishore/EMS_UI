@@ -14,6 +14,7 @@ routerApp.controller('eventsCtrl', function($rootScope,$scope,SearchService, $ht
 
         console.log(data);
     }
+    //Search Service for movies
     SearchService(callBackForMovies,$scope.url);
 
     function callBackForMovies(data) {
@@ -22,14 +23,16 @@ routerApp.controller('eventsCtrl', function($rootScope,$scope,SearchService, $ht
 
         console.log(data);
     }
+    //search service for sports
     SearchService(callBackForSports,$scope.url);
 
-    function callBackForAllSports(data) {
+    function callBackForSports(data) {
         $scope.event_data = data;
         $scope.first_name = "kishore";
 
         console.log(data);
     }
+    //search service for music
     SearchService(callBackForMusic,$scope.url);
 
     function callBackForMusic(data) {
@@ -38,6 +41,7 @@ routerApp.controller('eventsCtrl', function($rootScope,$scope,SearchService, $ht
 
         console.log(data);
     }
+    //search service for stage events
     SearchService(callBackForStageEvents,$scope.url);
 
     function callBackForStageEvents(data) {
