@@ -63,6 +63,25 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl:'pages/events/search.html'
         })
 
+        //nested view of search page in events
+
+        .state('events.eventsSearch.popularity',{
+            url:'/SearchbyPopularity',
+            templateUrl:'pages/events/popularitySearch.html'
+        })
+        .state('events.eventsSearch.certificate',{
+            url:'/SearchByCertificate',
+            templateUrl:'pages/events/certificateSearch.html'
+        })
+        .state('events.eventsSearch.venue',{
+            url:'/SearchbyVenue',
+            templateUrl:'pages/events/venueSearch.html'
+        })
+        .state('events.eventsSearch.performer',{
+            url:'/SearchByPerformer',
+            templateUrl:'pages/events/performerSearch.html'
+        })
+
 
         /*.state('dash', {
             url: '/dash',
@@ -91,12 +110,27 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             //controller:'dashboardCtrl'
 
         })
-        .state('userDashboard.eventManagement', {
-            url: '/eventManagement',
-            templateUrl: 'pages/dashboard/user/eventManagement.html'
+        .state('userDashboard.userEventManagement', {
+            url: '/userEventManagement',
+            templateUrl: 'pages/dashboard/user/userEventManagement.html'
             //controller:'dashboardCtrl'
 
         })
+
+        .state('userDashboard.userProfile', {
+            url: '/userProfile',
+            templateUrl: 'pages/dashboard/user/userProfile.html'
+            //controller:'dashboardCtrl'
+
+        })
+        .state('userDashboard.userTransaction', {
+            url: '/userTransaction',
+            templateUrl: 'pages/dashboard/user/userTransactionHistory.html'
+            //controller:'dashboardCtrl'
+
+        })
+
+
 
 
         .state('adminDashboard',{
