@@ -79,8 +79,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('userDashboard.userAccountSetting', {
             url: '/userAccountSetting',
-            templateUrl: 'pages/dashboard/user/userAccountSetting.html'
-            //controller:'dashboardCtrl'
+            templateUrl: 'pages/dashboard/user/userAccountSetting.html',
+           controller:'AccountSettingsController'
 
         })
 

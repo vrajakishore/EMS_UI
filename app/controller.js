@@ -67,6 +67,7 @@ routerApp.controller('dashBoardController', function($scope,$location,$state,$st
 
         console.log(userDetails);
 
+
         $rootScope.uid = userDetails.userid;
 
         if(userDetails.userid=="kishore@gmail.com"&&userDetails.password=="kishore"){
