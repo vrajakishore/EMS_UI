@@ -12,9 +12,11 @@ routerApp.controller('eventDetailsController', function($scope,$location,$state,
     $rootScope.currentLocation = $location.path();
     console.log($rootScope.currentLocation+" "+$stateParams.myParam.eventId +" user id "+$rootScope.uid);
 
-    $scope.SelectedEventDetails = [$stateParams.myParam];
+    $rootScope.detailedEvent = [$stateParams.myParam];
+    //$scope.detailedEvent =  $rootScope.detailedEvent;
+
     $rootScope.eventId  = $stateParams.myParam.eventId;
-    console.log($scope.SelectedEventDetails+" root event id "+$rootScope.eventId);
+    console.log($rootScope.detailedEvent+" root event id "+$rootScope.eventId);
 
     /*if($stateParams.myParam!=null) {
         $rootScope.eventId = $stateParams.myParam;

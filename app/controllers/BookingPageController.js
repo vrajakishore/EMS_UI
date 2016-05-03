@@ -8,6 +8,10 @@ routerApp.controller('BookingPageController',function($scope,$state,$location,$s
     $scope.isLogin = $rootScope.isLogin;
     $rootScope.currentLocation = $location.path();
 
+    $scope.detailedEvent = $rootScope.detailedEvent;
+    /*$rootScope.ticketType = [$rootScope.detailedEvent.price];*/
+
+
     console.log("Booking page controller is Login "+$scope.isLogin);
     $scope.payNow= function(){
         if(!$rootScope.isLogin){
@@ -21,7 +25,7 @@ routerApp.controller('BookingPageController',function($scope,$state,$location,$s
             $scope.bookingObject.eventId = $rootScope.eventId;
             //$scope.bookingObject.ticketId = $scope.ticketId;
             $scope.bookingObject.noOfTickets = $scope.noOfTickets;
-            console.log($scope.bookingObject);
+            console.log($scope.bookingObject+" "+$rootScope.detailedEvent );
 
             //$window.location.href="www.google.com";
             $window.location.href = 'http://www.google.com';
@@ -45,31 +49,36 @@ routerApp.controller('BookingPageController',function($scope,$state,$location,$s
         /*console.log("PAY NOW METHOD");*/
     };
 
-   /* $scope.detailedEvent = $rootScope.detailedEvent;
+
+
+
+    $scope.detailedEvent = $rootScope.detailedEvent;
     $scope.selectedTicketType='';
     $scope.ticketCount='';
     $scope.getAmount = function(selectedTicketType,ticketCount){
-        var l = $scope.detailedEvent.tickettype.length;
+        /*var l = $scope.detailedEvent.tickettype.length;
         console.log("-------");
-        console.log($scope.detailedEvent);
-
+        console.log($scope.detailedEvent);*/
         $scope.noOfTickets = ticketCount;
-        for(var j=0; j<l;j++){
+        $rootScope.amount = selectedTicketType * ticketCount
+
+
+        /*for(var j=0; j<l;j++){
             if($scope.detailedEvent.tickettype[j].ticketType===selectedTicketType){
                 /!*console.log("before price");*!/
                 console.log("atickets");
                 $scope.ticketId = $scope.detailedEvent.tickettype[j].ticketId;
                 $scope.availableTickets =$scope.detailedEvent.tickettype[j].availableSeats;
             }
-        }
+        }*/
 
-        for(var i=0; i<l;i++){
+        /*for(var i=0; i<l;i++){
             if($scope.detailedEvent.tickettype[i].ticketType===selectedTicketType){
                 /!*console.log("before price");*!/
                 var price = $scope.detailedEvent.tickettype[i].price;
                 $rootScope.amount = price*ticketCount;
             }
-        }
-    };*/
+        }*/
+    };
 
 });
