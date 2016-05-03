@@ -10,15 +10,42 @@ routerApp.controller('eventsCtrl', function($rootScope,$scope,SearchService, $ht
     
     function callBackForAllEvents(data) {
         $scope.event_data = data;
-
-        //$rootScope.eventID = data.eventId;
-        //console.log( data.eventId+" hi");
-
         $scope.first_name = "kishore";
 
         console.log(data);
     }
-    
+    SearchService(callBackForMovies,$scope.url);
+
+    function callBackForMovies(data) {
+        $scope.event_data = data;
+        $scope.first_name = "kishore";
+
+        console.log(data);
+    }
+    SearchService(callBackForSports,$scope.url);
+
+    function callBackForAllSports(data) {
+        $scope.event_data = data;
+        $scope.first_name = "kishore";
+
+        console.log(data);
+    }
+    SearchService(callBackForMusic,$scope.url);
+
+    function callBackForMusic(data) {
+        $scope.event_data = data;
+        $scope.first_name = "kishore";
+
+        console.log(data);
+    }
+    SearchService(callBackForStageEvents,$scope.url);
+
+    function callBackForStageEvents(data) {
+        $scope.event_data = data;
+        $scope.first_name = "kishore";
+
+        console.log(data);
+    }
    /* $http.get('json/event.json').success(function (data){
         $scope.event_data = data;
 
