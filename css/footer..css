@@ -1,11 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One);
 @import url(http://fonts.googleapis.com/css?family=Gudea);
 .footer1 {
-    background: #fff url("../images/footer/footer-bg.png") repeat scroll left top;
-    padding-top: 40px;
+    background: #fff url("/images/footer.jpg") repeat scroll left top;
+    padding-top: 500px;
     padding-right: 0;
     padding-bottom: 20px;
-    padding-left: 0;/*	border-top-width: 4px;
+    padding-left: 0;
+
+    /*	border-top-width: 4px;
 	border-top-style: solid;
 	border-top-color: #003;*/
 }
