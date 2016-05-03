@@ -1,0 +1,176 @@
+<div class="page-header">
+    <h1>Event Management<span class="pull-right label label-default">:)</span></h1>
+</div>
+
+<div class="col-md-10">
+    <div class="panel with-nav-tabs panel-info">
+        <div class="panel-heading">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1primary" data-toggle="tab">Create Event</a></li>
+                <li><a href="#tab2primary" data-toggle="tab">Modify Event</a></li>
+                <li><a href="#tab3primary" data-toggle="tab">Remove Event</a></li>
+
+
+
+
+            </ul>
+        </div>
+        <div class="panel-body">
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="tab1primary">
+                   <form>
+                    <div class="input-group well-sm">
+
+                        <label for="ename">Event Name</label>
+                        <input type="text" ng-model="ename" class="form-control" placeholder="Event Name" required>
+                    </div>
+
+                    <div class="input-group well-sm">
+                        <label for="edate">Event Date</label>
+                        <input type="edate" ng-model="date" class="form-control" placeholder="Event Date" required>
+
+                    </div>
+
+                    <div class="input-group well-sm">
+
+                        <label for="etime">Event Time</label>
+                        <input type="time" ng-model="etime" class="form-control" placeholder="Event Time" required>
+
+                    </div>
+
+                    <div class="input-group well-sm">
+
+                       <label for="edesc">Event Description</label>
+                        <input type="text" ng-model="edesc" class="form-control" placeholder="Event Description" required>
+
+                    </div>
+                    <div class="input-group well-sm">
+
+                        <label for="Ecertificate">Select Event Certificate</label>
+                        <select ng-model="ecertificate"  required>
+
+                            <option value="PG">PG</option>
+                            <option value="UA">UA</option>
+                            <option value="A">A</option>
+
+                        </select>
+
+                    </div>
+                    <div class="input-group well-sm">
+
+                        <label for="capacity">Capacity</label>
+                        <input type="text" ng-model="capacity" class="form-control" placeholder="Max. no of persons " required>
+
+                    </div>
+                    <div class="input-group well-sm">
+
+                        <label for="oname">Organiser's Name</label>
+                        <input type="text" ng-model="oname" class="form-control" placeholder="Organiser's name" required>
+
+                    </div>
+                    <div class="input-group well-sm">
+
+                        <label for="pname">Performer's Name</label>
+                        <input type="text" ng-model="pname" class="form-control" placeholder="Performer Name" required>
+
+                    </div>
+
+                    <div class="input-group well-sm">
+
+                        <label for="venue">Event Venue</label>
+                        <input type="text" ng-model="venue" class="form-control" placeholder="Event venue" required>
+
+                    </div>
+                    <div class="input-group well-sm">
+
+                        <label for="price">Event Price</label>
+                        <input type="text" ng-model="price" class="form-control" placeholder="Event Price in Rs" required>
+
+                    </div>
+
+                    <div class="input-group well-sm">
+
+                        <label for="catname">Select Category Name</label>
+                        <select ng-model="catname" required>
+
+                            <option value="Movies">Movies</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Music">Music</option>
+                            <option value="Stage Event">Stage Event</option>
+
+                        </select>
+
+                    </div>
+                    <div class="input-group well-sm">
+
+                        <label for="catype">Select Payament Mode</label>
+                        <select ng-model="catype" required>
+
+                            <option value="Free">Free</option>
+                            <option value="Paid">Paid</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="input-group well-sm">
+                        <input type="submit" class=" btn btn-primary">
+                    </div>
+                   </form>
+                </div>
+
+
+
+
+                <div class="tab-pane fade" id="tab2primary">
+<form>
+                    <div class="input-group well-sm">
+
+                        <label for="ename">Event Name</label>
+                        <input type="text" ng-model="Mename" class="form-control" placeholder="Event Name" required>
+                    </div>
+                    <div class="input-group well-sm">
+                        <label for="edate">Event Date</label>
+                        <input type="Medate" ng-model="date" class="form-control" placeholder="Event Date" required>
+
+                    </div>
+
+                    <div class="input-group well-sm">
+                        <input type="submit" class=" btn btn-primary">
+                    </div>
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="tab3primary">
+
+                    <form>
+                    <div class="input-group well-sm">
+
+                        <label for="ename">Event Name</label>
+                        <input type="text" ng-model="Mename" class="form-control" placeholder="Event Name" required>
+                    </div>
+                    <div class="input-group well-sm">
+                        <label for="edate">Event Date</label>
+                        <input type="Medate" ng-model="date" class="form-control" placeholder="Event Date" required>
+
+                    </div>
+                    <div class="input-group well-sm">
+                        <input type="submit" class=" btn btn-primary">
+                    </div>
+                    </form>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+

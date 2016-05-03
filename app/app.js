@@ -90,6 +90,12 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             //controller:'dashboardCtrl'
 
         })
+        .state('userDashboard.eventManagement', {
+            url: '/eventManagement',
+            templateUrl: 'pages/dashboard/user/eventManagement.html'
+            //controller:'dashboardCtrl'
+
+        })
 
 
         .state('adminDashboard',{
