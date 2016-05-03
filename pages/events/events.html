@@ -32,12 +32,12 @@
 
                     <div class="col-sm-4" ng-repeat="g in event_data">
                         <div class="thumbnail" >
-                            <div class="row pull-left"><span class="label label-danger">{{g.Category.categoryType}}</span></div>
-                            <img src="{{g.eventImageUrl}}" alt="{{g.venue.venueCity}}" width="400" height="300">
-                            <span class="label-danger">{{g.eventId}}</span>
-                            <p><strong>{{g.venue.venueCity}}</strong></p>
+                            <div class="row pull-left"><span class="label label-danger">{{g.Category.category_type}}</span></div>
+                            <img src="{{g.event_image_rl}}" alt="{{g.venue.venue_city}}" width="400" height="300">
+                            <span class="label-danger">{{g.event_id}}</span>
+                            <p><strong>{{g.venue.venue_city}}</strong></p>
 
-                            <p>{{g.eventDate}}</p>
+                            <p>{{g.event_date}}</p>
                             <!--<button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>-->
 
                            <!-- <a ui-sref=".eventDetails"><strong>Book/Details</strong></a>-->

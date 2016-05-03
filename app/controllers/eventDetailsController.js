@@ -10,11 +10,13 @@ routerApp.controller('eventDetailsController', function($scope,$location,$state,
 
 
     $rootScope.currentLocation = $location.path();
-    console.log($rootScope.currentLocation+" "+$stateParams.myParam.eventId +" user id "+$rootScope.uid);
+    console.log($rootScope.currentLocation+" "+$stateParams.myParam.event_id +" user id "+$rootScope.uid);
 
-    $scope.SelectedEventDetails = [$stateParams.myParam];
-    $rootScope.eventId  = $stateParams.myParam.eventId;
-    console.log($scope.SelectedEventDetails+" root event id "+$rootScope.eventId);
+    $rootScope.detailedEvent = [$stateParams.myParam];
+    //$scope.detailedEvent =  $rootScope.detailedEvent;
+
+    $rootScope.eventId  = $stateParams.myParam.event_id;
+    console.log($rootScope.detailedEvent+" root event id "+$rootScope.eventId);
 
     /*if($stateParams.myParam!=null) {
         $rootScope.eventId = $stateParams.myParam;
@@ -23,6 +25,18 @@ routerApp.controller('eventDetailsController', function($scope,$location,$state,
         console.log("EventId is : ----" + $rootScope.eventId);
     }*/
 
+
+   /* $scope.commentsURL = 'http://din51002665:8181/EventManagement/findComment?eventId='+$rootScope.eventId;*/
+
+    $scope.commentsURL = 'json/comment.json'
+    //console.log($scope.commentsURL);
+    SearchService(callbackForComments,$scope.commentsURL);
+
+    function callbackForComments(data){
+        /*console.log("IN CALL BACK OF COMMENTS");*/
+        $rootScope.comments =  data;
+        console.log("comments "+$rootScope.comments);
+    };
 
 
 

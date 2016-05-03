@@ -3,7 +3,7 @@
 <!--<button class="btn-default" ui-sref="events"><strong>back</strong></button>-->
 
 
-<div class="container">
+<div class="container" ng-repeat="a in detailedEvent">
 
    <!-- <div ng-repeat="g in event_data">
         {{g.eventCertificate}}
@@ -13,18 +13,18 @@
         {{g.performer.performerFirstName}}
         {{g.performer.performerLastName}}</div>-->
     hhhhh
-    <div ng-repeat="a in SelectedEventDetails">
+   <!-- <div ng-repeat="a in detailedEvent">
     {{a.eventCertificate}}
         {{a.eventDescription}}
         {{a.eventTime}}
         {{a.organiser.organiserName}}
         {{a.performer.performerFirstName}}
         {{a.performer.performerLastName}}
-    </div>
+    </div>-->
 
-    <div class="row">
+    <div class="row" >
         <div class="col-md-1"></div>
-        <div class="col-md-10 text-justify">
+        <div class="col-md-10 text-justify" >
             <!--    for image n other details-->
             <div class="row">
                 <div class="col-md-6">
@@ -32,40 +32,39 @@
                 </div>
                 <div class="col-md-4 ">
                     <!--<h2>{{detailedEvent.eventId}}</h2><br>-->
-                    <h2>{{detailedEvent.eventName}} </h2><br>
+                    <h2>{{a.eventName}} </h2><br>
                     <h4><span class="glyphicon glyphicon-map-marker"> </span>
-                        <b>Venue:</b></h4> <h4> Ramanbaug, Pune, India </h4><br>
+                        <b>Venue:</b></h4> <h4> {{a.venue.venue_name}}, {{a.venue.venue_city}}</h4><br>
                     <h4><span class="glyphicon glyphicon-star"> </span>
                         <b>Rating:</b></h4> <h4>{{detailedEvent.avgRating}}</h4>
                     <a ui-sref="events.bookNow" class="btn btn-info">Book Now</a>
                 </div>
-                <div class="col-md-2"><br><br><br><br><br><br>
+                <!--<div class="col-md-2"><br><br><br><br><br><br>
                     <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span> &nbsp;&nbsp;{{ratingOf5}}<br>
                     <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span>&nbsp;&nbsp;{{ratingOf4}}<br>
                     <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span>&nbsp;&nbsp;{{ratingOf3}}<br>
                     <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"> </span>&nbsp;&nbsp;{{ratingOf2}}<br>
                     <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;{{ratingOf1}}
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="col-md-1"></div>
     </div>
     <br><br>
     <!-- for description & Schedule-->
-    <div class="row">
+    <div class="row container-fluid">
         <div class="col-md-1"></div>
         <div class=" col-md-6 text-justify"><!-- for description-->
             <h3 class="text-left">Description:</h3><br>
-            <p>{{detailedEvent.description}}</p>
+            <p>{{a.event_description}}</p>
         </div>
         <div class="col-md-4 well well-lg"><!-- for Schedule-->
             <h3 align="center">Schedule</h3>
             <ul class="list-group">
-                <li class="list-group-item" ng-repeat="timings in detailedEvent.schedule">
-                    <span class="badge">{{timings.startTime}}</span>
-                    <span class="badge">to</span>
-                    <span class="badge">{{timings.endTime}}</span>
-                    {{timings.date}}
+                <li class="list-group-item">
+                    <span class="badge">{{a.event_time}}</span>
+
+                    {{a.event_date}}
                 </li>
             </ul>
         </div>
@@ -76,10 +75,10 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
-            <div class="col-md-4" ng-repeat="performer in detailedEvent.performer">
+            <div class="col-md-4">
                 <div  align="center">
                     <img class="img-circle" data-ng-src="{{performer.photoUrl}}" alt="Performer Image" width="200px" height="200px"><br>
-                    <strong>{{performer.firstName}}&nbsp;&nbsp;&nbsp;{{performer.lastName}}</strong>
+                    <strong>{{a.performer.performer_first_name}}&nbsp;&nbsp;&nbsp;{{a.performer.performer_last_name}}</strong>
                 </div>
             </div>
         </div>

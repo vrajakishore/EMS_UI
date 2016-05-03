@@ -1,93 +1,97 @@
 [
   {
-    "eventId" : 1,
-    "eventName" : "Comic Con",
-    "eventDate" : "23-Mar-2010",
-    "eventCertificate" : "UA",
-    "eventDescription" : "America events",
+    "event_id" : 1,
+    "event_name" : "Comic Con",
+    "event_date" : "23-Mar-2010",
+    "event_Certificate" : "UA",
+    "event_description" : "America events",
+    "event_image_url" : "America events.jpg",
     "capacity" : {
-      "capacityId" : 1,
-      "silverCapacity" : 200,
-      "goldCapacity" : 100,
-      "platinumCapacity" : 50,
-      "silverCurrentCapacity" : 200,
-      "goldCurrentCapacity" : 100,
-      "platinumCurrentCapacity" : 50
+      "capacity_id" : 1,
+      "silver_capacity" : 200,
+      "gold_capacity" : 100,
+      "platinum_capacity" : 50,
+      "silver_current_capacity" : 200,
+      "gold_current_capacity" : 100,
+      "platinum_current_capacity" : 50
     },
-    "eventStatus" : "Approved",
-    "eventTime" : "18:00:00 IST",
+    "event_status" : "Approved",
+    "event_time" : "18:00:00 IST",
     "organiser" : {
-      "organiserId" : 1,
-      "organiserName" : "Kishore"
+      "organiser_id" : 1,
+      "organiser_name" : "Kishore"
     },
     "price" :{
-      "priceId" : 1,
-      "priceGold" : "800.00",
-      "priceSilver" : "500.00",
-      "pricePlatinum" : "1000.0"
+      "price_id" : 1,
+      "price_gold" : "800.00",
+      "price_silver" : "500.00",
+      "price_platinum" : "1000.0"
     },
     "venue" : {
-      "venueId" : 1,
-      "venueName" : "Central   Mall",
-      "venueCity" : "Hyderabad"
+      "venue_id" : 1,
+      "venue_name" : "Central   Mall",
+      "venue_city" : "Hyderabad"
     },
     "performer" : {
-      "performerId" : 1 ,
-      "performerFirstName" : "Christian",
-      "performerLastName" : "Bale",
-      "performerDOB" : "27-Mar-1985"
+      "performer_id" : 1 ,
+      "performer_first_name" : "Christian",
+      "performer_last_name" : "Bale",
+      "performer_dob" : "27-Mar-1985"
     },
     "Category":{
-      "categoryId" : "1",
-      "categoryName" : "Events",
-      "categoryType" : "PAID"
-    }},
-
+      "category_id" : "1",
+      "category_name" : "Events",
+      "category_type" : "PAID"
+    }
+  },
 
   {
-    "eventId" : 2,
-    "eventName" : "asdasda",
-    "eventDate" : "24-Mar-2010",
-    "eventCertificate" : "UA",
-    "eventDescription" : "wqeqweqwadzzxcz",
+    "event_id" : 2,
+    "event_name" : "Something Something",
+    "event_date" : "24-Mar-2010",
+    "event_Certificate" : "A",
+    "event_description" : "Japan events",
+    "event_image_url" : "Japan events.jpg",
     "capacity" : {
-      "capacityId" : 1,
-      "silverCapacity" : 200,
-      "goldCapacity" : 100,
-      "platinumCapacity" : 50,  "silverCurrentCapacity" : 200,
-      "goldCurrentCapacity" : 100,
-      "platinumCurrentCapacity" : 50
+      "capacity_id" : 1,
+      "silver_capacity" : 200,
+      "gold_capacity" : 100,
+      "platinum_capacity" : 50,
+      "silver_current_capacity" : 200,
+      "gold_current_capacity" : 100,
+      "platinum_current_capacity" : 50
     },
-    "eventStatus" : "Approved",
-    "eventTime" : "19:00:00 IST",
+    "event_status" : "Approved",
+    "event_time" : "19:00:00 IST",
     "organiser" : {
-      "organiserId" : 1,
-      "organiserName" : "Abhishek"
+      "organiser_id" : 1,
+      "organiser_name" : "Sunil"
     },
     "price" :{
-      "priceId" : 1,
-      "priceGold" : "800.00",
-      "priceSilver" : "500.00",
-      "pricePlatinum" : "1000.0"
+      "price_id" : 1,
+      "price_gold" : "800.00",
+      "price_silver" : "500.00",
+      "price_platinum" : "1000.0"
     },
     "venue" : {
-      "venueId" : 1,
-      "venueName" : "Central   Mall",
-      "venueCity" : "Pune"
+      "venue_id" : 1,
+      "venue_name" : "Central   Mall",
+      "venue_city" : "Pune"
     },
     "performer" : {
-      "performerId" : 1 ,
-      "performerFirstName" : "asdasd",
-      "performerLastName" : "asdasd",
-      "performerDOB" : "27-Mar-1985"
+      "performer_id" : 1 ,
+      "performer_first_name" : "Munna",
+      "performer_last_name" : "Bhai",
+      "performer_dob" : "27-Mar-1985"
     },
     "Category":{
-      "categoryId" : "1",
-      "categoryName" : "Events",
-      "categoryType" : "FREE"
+      "category_id" : "1",
+      "category_name" : "Events",
+      "category_type" : "FREE"
     }
-
-
   }
-  ]
+
+
+
+    ]
 

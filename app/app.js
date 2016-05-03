@@ -63,6 +63,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl:'pages/events/search.html'
         })
 
+
         /*.state('dash', {
             url: '/dash',
             templateUrl: 'pages/userdashboard.html'
