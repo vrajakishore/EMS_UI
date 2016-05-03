@@ -100,7 +100,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('userDashboard.userAccountSetting', {
             url: '/userAccountSetting',
             templateUrl: 'pages/dashboard/user/userAccountSetting.html',
-           controller:'AccountSettingsController'
+            controller:'userAccountSettingsController'
 
         })
 

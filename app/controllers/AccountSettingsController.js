@@ -4,9 +4,7 @@
 
 routerApp.controller('AccountSettingsController',function($scope,$state,$location,$stateParams,$rootScope,$http,$window){
 
-
     if(!$rootScope.isLogin){
-
 
         $scope.changePassword= function(Details){
 

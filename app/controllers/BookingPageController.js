@@ -15,11 +15,7 @@ routerApp.controller('BookingPageController',function($scope,$state,$location,$s
     console.log("Booking page controller is Login "+$scope.isLogin);
     $scope.payNow= function(){
         if(!$rootScope.isLogin){
-
-
-
-            $state.go('home');
-
+            $("#loginModal").modal()
         }
         else{
 
