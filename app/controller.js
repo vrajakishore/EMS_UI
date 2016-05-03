@@ -10,10 +10,6 @@ routerApp.controller('eventsCtrl', function($rootScope,$scope,SearchService, $ht
     
     function callBackForAllEvents(data) {
         $scope.event_data = data;
-
-        //$rootScope.eventID = data.eventId;
-        //console.log( data.eventId+" hi");
-
         $scope.first_name = "kishore";
 
         console.log(data);
@@ -65,7 +61,7 @@ routerApp.controller('dashBoardController', function($scope,$location,$state,$st
 
     $scope.login = function(userDetails){
 
-        console.log(userDetails);
+        console.log("user id "+userDetails);
 
         $rootScope.uid = userDetails.userid;
 
