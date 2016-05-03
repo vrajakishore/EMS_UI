@@ -16,16 +16,21 @@ routerApp.controller('BookingPageController',function($scope,$state,$location,$s
     $scope.payNow= function(){
         if(!$rootScope.isLogin){
 
+
+
             $state.go('home');
 
         }
         else{
+
+
+
             $scope.bookingObject={};
             $scope.bookingObject.userId = $rootScope.uid;
             $scope.bookingObject.eventId = $rootScope.eventId;
-            //$scope.bookingObject.ticketId = $scope.ticketId;
+            $scope.bookingObject.ticketId = $scope.ticketId;
             $scope.bookingObject.noOfTickets = $scope.noOfTickets;
-            console.log($scope.bookingObject+" "+$rootScope.detailedEvent );
+            console.log($scope.bookingObject.ticketId+" "+$rootScope.detailedEvent );
 
             //$window.location.href="www.google.com";
             $window.location.href = 'http://www.google.com';
@@ -59,6 +64,7 @@ routerApp.controller('BookingPageController',function($scope,$state,$location,$s
         /*var l = $scope.detailedEvent.tickettype.length;
         console.log("-------");
         console.log($scope.detailedEvent);*/
+        $scope.ticketId = selectedTicketType;
         $scope.noOfTickets = ticketCount;
         $rootScope.amount = selectedTicketType * ticketCount
 

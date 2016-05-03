@@ -34,7 +34,7 @@
                     <!--<h2>{{detailedEvent.eventId}}</h2><br>-->
                     <h2>{{a.eventName}} </h2><br>
                     <h4><span class="glyphicon glyphicon-map-marker"> </span>
-                        <b>Venue:</b></h4> <h4> {{a.venue.venueName}}, {{a.venue.venueCity}}</h4><br>
+                        <b>Venue:</b></h4> <h4> {{a.venue.venue_name}}, {{a.venue.venue_city}}</h4><br>
                     <h4><span class="glyphicon glyphicon-star"> </span>
                         <b>Rating:</b></h4> <h4>{{detailedEvent.avgRating}}</h4>
                     <a ui-sref="events.bookNow" class="btn btn-info">Book Now</a>
@@ -56,15 +56,15 @@
         <div class="col-md-1"></div>
         <div class=" col-md-6 text-justify"><!-- for description-->
             <h3 class="text-left">Description:</h3><br>
-            <p>{{a.eventDescription}}</p>
+            <p>{{a.event_description}}</p>
         </div>
         <div class="col-md-4 well well-lg"><!-- for Schedule-->
             <h3 align="center">Schedule</h3>
             <ul class="list-group">
                 <li class="list-group-item">
-                    <span class="badge">{{a.eventTime}}</span>
+                    <span class="badge">{{a.event_time}}</span>
 
-                    {{a.eventDate}}
+                    {{a.event_date}}
                 </li>
             </ul>
         </div>
@@ -78,7 +78,7 @@
             <div class="col-md-4">
                 <div  align="center">
                     <img class="img-circle" data-ng-src="{{performer.photoUrl}}" alt="Performer Image" width="200px" height="200px"><br>
-                    <strong>{{a.performer.performerFirstName}}&nbsp;&nbsp;&nbsp;{{a.performer.performerLastName}}</strong>
+                    <strong>{{a.performer.performer_first_name}}&nbsp;&nbsp;&nbsp;{{a.performer.performer_last_name}}</strong>
                 </div>
             </div>
         </div>
