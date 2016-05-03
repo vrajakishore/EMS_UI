@@ -26,6 +26,18 @@ routerApp.controller('eventDetailsController', function($scope,$location,$state,
     }*/
 
 
+   /* $scope.commentsURL = 'http://din51002665:8181/EventManagement/findComment?eventId='+$rootScope.eventId;*/
+
+    $scope.commentsURL = 'json/comment.json'
+    //console.log($scope.commentsURL);
+    SearchService(callbackForComments,$scope.commentsURL);
+
+    function callbackForComments(data){
+        /*console.log("IN CALL BACK OF COMMENTS");*/
+        $rootScope.comments =  data;
+        console.log("comments "+$rootScope.comments);
+    };
+
 
 
     
