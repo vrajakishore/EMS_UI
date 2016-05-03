@@ -1,0 +1,19 @@
+[
+  {
+    "commentId" : 1,
+    "userId" : 1,
+    "eventId" : 1,
+    "comment" : "Hello",
+    "imgURL" : "abc.jpeg",
+    "time" : "2016-05-03 16:26:16"
+  },
+  {
+    "commentId" : 2,
+    "userId" : 2,
+    "eventId" : 1,
+    "comment" : "Hii",
+    "imgURL" : "abcd.jpeg",
+    "time" : "2016-05-03 16:30:16"
+  }
+
+]
