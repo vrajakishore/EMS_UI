@@ -15,7 +15,11 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/home',
             templateUrl: 'pages/home.html'
         })
-
+// Contact Us
+        .state('contact',{
+            url: '/contact',
+            templateUrl:'pages/contact.html'
+        })
     // EVENT STATES AND NESTED VIEWS ========================================
         .state('events', {
             url: '/events',

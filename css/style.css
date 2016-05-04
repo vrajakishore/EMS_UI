@@ -5,7 +5,13 @@
   -moz-box-shadow: 0 10px 6px -6px #777;
   box-shadow: 0 10px 6px -6px #777;
 }
-
+/*contact us div */
+.color {
+    background-color: deepskyblue;
+    width: 500px;
+    height: 50px;
+    border: 3px  #73AD21
+}
 /*Login modal css*/
 .prettyline {
   height: 5px;
