@@ -36,7 +36,7 @@ routerApp.controller('dashBoardController', function($scope,$location,$state,$st
 
     $scope.login = function(userDetails){
 
-        //console.log(userDetails);
+        console.log(userDetails);
 
 
 
@@ -45,10 +45,13 @@ routerApp.controller('dashBoardController', function($scope,$location,$state,$st
         $rootScope.password = userDetails.password;
 
         console.log("user details "+$rootScope.uid+" "+$rootScope.password);
-        if($rootScope.userid=="kishore@gmail.com"&&$rootScope.password=="kishore"){
+
+
+        if($rootScope.uid=="kishore@gmail.com"&&$rootScope.password=="kishore"){
+
             $rootScope.isLogin = true;
 
-
+            console.log("admin logged ");
 
             $scope.menuLog = "LOGGED IN";
             $rootScope.dashboardPage = "adminDashboard";
