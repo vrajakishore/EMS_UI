@@ -121,12 +121,12 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             //controller:'dashboardCtrl'
 
         })
-        .state('userDashboard.userEventManagement', {
+       /* .state('userDashboard.userEventManagement', {
             url: '/userEventManagement',
             templateUrl: 'pages/dashboard/user/userEventManagement.html'
             //controller:'dashboardCtrl'
 
-        })
+        })*/
 
         .state('userDashboard.userProfile', {
             url: '/userProfile',
@@ -146,7 +146,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('adminDashboard',{
             url: '/adminDashboard',
-            templateUrl: 'pages/dashboard/admin/adminDashboard.html',
+            templateUrl: 'pages/dashboard/admin/adminDashboard.html'
             //controller:
         })
 
@@ -165,6 +165,47 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         templateUrl:'pages/feedback.html'
 
     })
+    /*Organiser Dashboard
+     */
+        .state('organiserDashboard', {
+            url: '/organiserDashboard',
+            templateUrl: 'pages/dashboard/organiser/organiserdashboard.html',
+            controller:'organiserDashboardController'
+
+        })
+
+        .state('organiserDashboard.organiserAccountSetting', {
+            url: '/organiserAccountSetting',
+            templateUrl: 'pages/dashboard/organiser/organiserAccountSetting.html'
+            //controller:'userAccountSettingsController'
+
+        })
+
+        .state('organiserDashboard.organiserUpcomingEvents', {
+            url: '/organiserUpcomingEvents',
+            templateUrl: 'pages/dashboard/organiser/organiserUpcomingEvents.html'
+            //controller:'dashboardCtrl'
+
+        })
+        .state('organiserDashboard.organiserEventManagement', {
+         url: '/organiserEventManagement',
+         templateUrl: 'pages/dashboard/organiser/organiserEventManagement.html'
+         //controller:'dashboardCtrl'
+
+         })
+
+        .state('organiserDashboard.organiserProfile', {
+            url: '/organiserProfile',
+            templateUrl: 'pages/dashboard/organiser/organiserProfile.html'
+            //controller:'dashboardCtrl'
+
+        })
+        .state('organiserDashboard.organiserTransaction', {
+            url: '/organiserTransaction',
+            templateUrl: 'pages/dashboard/organiser/organiserTransactionHistory.html'
+            //controller:'dashboardCtrl'
+
+        })
 
 });
 

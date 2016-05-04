@@ -1,0 +1,145 @@
+    <div class="page-header">
+        <h1>Account Settings<span class="pull-right label label-default">:)</span></h1>
+    </div>
+
+    <div class="col-md-10">
+        <div class="panel with-nav-tabs panel-info">
+            <div class="panel-heading">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab1primary" data-toggle="tab">Change Password</a></li>
+                    <li><a href="#tab2primary" data-toggle="tab">Edit Profile</a></li>
+                    <li><a href="#tab3primary" data-toggle="tab">Deactivate Account</a></li>
+
+
+
+
+                </ul>
+            </div>
+            <div class="panel-body">
+                <div class="tab-content">
+
+
+                    <div class="tab-pane fade in active" id="tab1primary">
+                        <form>
+                        <div class="input-group well-sm">
+
+                         <input type="text" class="form-control"  value={{uid}} readonly>
+
+                        </div>
+
+                        <div class="input-group well-sm">
+                            <input type="password" ng-model="change.currentPassword" class="form-control" placeholder="Current Password" required>
+
+                        </div>
+
+                        <div class="input-group well-sm">
+
+                            <input type="password" ng-model="change.newPassword" class="form-control" placeholder="New Password" required>
+
+                        </div>
+
+                        <div class="input-group well-sm">
+
+                            <input type="password" ng-model="change.retypePassword" class="form-control" placeholder="Retype Password" required>
+
+                        </div>
+
+                        <div class="input-group well-sm">
+                            <input type="submit" ng-click="changePassword(change)" class=" btn btn-primary">
+                        </div>
+                        </form>
+                    </div>
+
+
+
+                    <div class="tab-pane fade" id="tab2primary">
+
+                        <form>
+                        <div class="input-group well-sm">
+
+                            <input type="text" ng-model="edit.firstName" class="form-control" placeholder="First Name" name="fname" required>
+                        </div>
+
+                        <div class="input-group well-sm">
+                            <input type="text" ng-model="edit.lastName" class="form-control" placeholder="Last Name" name="lname" required>
+
+                        </div>
+
+                        <div class="input-group well-sm">
+
+                            <input type="date" ng-model="edit.dateOfBirth" class="form-control" placeholder="Date Of Birth" name="dob" required>
+
+                        </div>
+
+                        <div class="input-group well-sm">
+
+                            <input type="email" ng-model="edit.email" class="form-control" placeholder="Email" name="email" required>
+
+                        </div>
+
+                        <div class="input-group well-sm">
+
+                            <input type="url" ng-model="edit.imageUrl" class="form-control" placeholder="Image Url" name="Iurl" required>
+
+                        </div>
+
+                        <div class="input-group well-sm">
+
+                            <input type="number" ng-model="edit.Contact" class="form-control" placeholder="Contact Number" name="contact" required>
+
+                        </div>
+                        <div class="input-group well-sm">
+
+                            <input type="text" ng-model="edit.Address" class="form-control" placeholder="Address" name="address" required>
+
+                        </div>
+
+                        <div class="input-group well-sm">
+
+                           <select  ng-model="edit.role" required>
+
+                               <option value="Oganiser">Organiser</option>
+                               <option value="User">User</option>
+                           </select>
+
+                        </div>
+
+
+                        <div class="input-group well-sm">
+                            <input type="submit" ng-click="editProfile(edit)" class=" btn btn-primary">
+                        </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab3primary">
+
+                        <form>
+                        <div class="input-group well-sm">
+                            <h3>Why you want to Deactivate?</h3>
+                            <select ng-model="deactivate.deactivateReason" required>
+                                <option value="I am not happy">I am not happy</option>
+                                <option value="I have an another account">I have an another account</option>
+                                <option value="I have Privacy Issues">I have Privacy Issues</option>
+                                <option value="Somebody hacked my account">Somebody hacked my account</option>
+                            </select>
+                        </div>
+                        <div class="input-group well-sm">
+                            <input type="submit" ng-click="deactivateAcc(deactivate)" class=" btn btn-primary">
+                        </div>
+                        </form>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
