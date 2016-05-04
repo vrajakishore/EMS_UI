@@ -1,222 +1,227 @@
+<div class="wrapper">
+<h1>Event Details<span class=" label label-default"></span></h1><div class="container-fluid">
 
 
+</div>
 
-    <!--<button class="btn-default" ui-sref="events"><strong>back</strong></button>-->
+<!--<button class="btn-default" ui-sref="events"><strong>back</strong></button>-->
 
 
-    <div class="container-fluid" ng-repeat="a in detailedEvent">
-        <h1>Event Details<span class=" label label-default"></span></h1>
+<div class="container" ng-repeat="a in detailedEvent">
 
-        <div class="row" >
-            <!--<div class="col-md-1"></div>-->
-            <div class="col-lg-10 text-justify" >
-                <!--    for image n other details-->
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img data-ng-src="{{detailedEvent.album.photoCollections[0].photoUrl}}"  height="200" width="190" >
-                    </div>
-                    <div class="col-lg-6 ">
-                        <!--<h2>{{detailedEvent.eventId}}</h2><br>-->
-                        <h2>{{a.eventName}} </h2><br>
-                        <h4><span class="glyphicon glyphicon-map-marker"> </span>
-                            <b>Venue:</b></h4> <h4> {{a.venue.venue_name}}, {{a.venue.venue_city}}</h4><br>
-                        <h4><span class="glyphicon glyphicon-star"> </span>
-                            <b>Rating:</b></h4> <h4>{{detailedEvent.avgRating}}</h4>
-                        <a ui-sref="events.bookNow" class="btn btn-info">Book Now</a>
-                    </div>
-                    <!--<div class="col-md-2"><br><br><br><br><br><br>
-                        <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span> &nbsp;&nbsp;{{ratingOf5}}<br>
-                        <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span>&nbsp;&nbsp;{{ratingOf4}}<br>
-                        <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span>&nbsp;&nbsp;{{ratingOf3}}<br>
-                        <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"> </span>&nbsp;&nbsp;{{ratingOf2}}<br>
-                        <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;{{ratingOf1}}
-                    </div>-->
+
+    <div class="row" >
+        <div class="col-md-1"></div>
+        <div class="col-md-9 text-justify" >
+            <!--    for image n other details-->
+            <div class="row">
+                <div class="col-md-6">
+                    <img data-ng-src="{{detailedEvent.album.photoCollections[0].photoUrl}}"  height="200" width="190" >
+                </div>
+                <div class="col-md-4 ">
+                    <!--<h2>{{detailedEvent.eventId}}</h2><br>-->
+                    <h2>{{a.eventName}} </h2><br>
+                    <h4><span class="glyphicon glyphicon-map-marker"> </span>
+                        <b>Venue:</b></h4> <h4> {{a.venue.venue_name}}, {{a.venue.venue_city}}</h4><br>
+                    <h4><span class="glyphicon glyphicon-star"> </span>
+                        <b>Rating:</b></h4> <h4>{{detailedEvent.avgRating}}</h4>
+                    <a ui-sref="events.bookNow" class="btn btn-info">Book Now</a>
+                </div>
+                <!--<div class="col-md-2"><br><br><br><br><br><br>
+                    <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span> &nbsp;&nbsp;{{ratingOf5}}<br>
+                    <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span>&nbsp;&nbsp;{{ratingOf4}}<br>
+                    <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"> </span><span class="glyphicon glyphicon-star"> </span>&nbsp;&nbsp;{{ratingOf3}}<br>
+                    <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"> </span>&nbsp;&nbsp;{{ratingOf2}}<br>
+                    <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;{{ratingOf1}}
+                </div>-->
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <br><br>
+    <!-- for description & Schedule-->
+    <div id="container">
+        <div class="col-sm-3"></div>
+        <div><!-- for description-->
+            <h3 class="text-left">Description:</h3><br>
+            <p>{{a.event_description}}</p>
+        </div>
+        <div class="col-sm-5 well  " ><!-- for Schedule-->
+            <h3 align="center">Schedule</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <span class="badge">{{a.event_time}}</span>
+
+                    {{a.event_date}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <br>
+    <!--performers-->
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-md-10">
+            <div class="col-md-4">
+                <div  align="center">
+                    <img class="img-circle" data-ng-src="{{performer.photoUrl}}" alt="Performer Image" width="150px" height="150px"><br>
+                    <strong>{{a.performer.performer_first_name}}&nbsp;&nbsp;&nbsp;{{a.performer.performer_last_name}}</strong>
                 </div>
             </div>
-            <!--<div class="col-md-2"></div>-->
         </div>
-        <br><br>
-        <!-- for description & Schedule-->
-        <div id="row">
-            <div class="col-lg-5"><!-- for description-->
-                <h3 class="text-left">Description:</h3><br>
-                <p>{{a.event_description}}</p>
-            </div>
-            <div class="col-lg-5 well" ><!-- for Schedule-->
-                <h3 align="center">Schedule</h3>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <span class="badge">{{a.event_time}}</span>
-
-                        {{a.event_date}}
-                    </li>
-                </ul>
-            </div>
-            <!--<div class="col-md-1"></div>-->
-        </div>
-        <br>
-        <!--performers-->
-        <div class="row">
-            <!-- <div class="col-sm-3"></div>-->
-            <div class="col-lg-10">
-                <div class="col-lg-4">
-                    <div  align="center">
-                        <img class="img-circle" data-ng-src="{{performer.photoUrl}}" alt="Performer Image" width="150px" height="150px"><br>
-                        <strong>{{a.performer.performer_first_name}}&nbsp;&nbsp;&nbsp;{{a.performer.performer_last_name}}</strong>
-                    </div>
-                </div>
-            </div>
-            <!--<div class="col-md-1"></div>-->
-        </div>
-
-
-        <!--Rating-->
-        <div class="row">
-            <!--<div class="col-sm-1"></div>-->
-            <div class="col-lg-10">
-                <div ng-init="rating = 0"><h4> Rating : <uib-rating ng-model="rating" ng-change="sendRating(rating)" max="5" state-on="'glyphicon-star'" state-off="'glyphicon-star-empty'" aria-labelledby="custom-icons-1"></uib-rating> <b>(<i>Rate:</i> {{rating}})</b></h4></div>
-            </div>
-        </div>
+        <div class="col-md-1"></div>
     </div>
 
-    <!--comments-->
+
+    <!--Rating-->
     <div class="row">
-        <!--<div class="col-md-1"></div>-->
-        <div class="col-lg-10">
-            <div class="post-comments">
+        <div class="col-sm-1"></div>
+        <div class="col-md-10">
+            <div ng-init="rating = 0"><h4> Rating : <uib-rating ng-model="rating" ng-change="sendRating(rating)" max="5" state-on="'glyphicon-star'" state-off="'glyphicon-star-empty'" aria-labelledby="custom-icons-1"></uib-rating> <b>(<i>Rate:</i> {{rating}})</b></h4></div>
+        </div>
+    </div>
+</div>
 
-                <form>
-                    <div class="form-group">
-                        <label for="comment">Your Comment</label>
-                        <textarea name="comment" id="comment" class="form-control" rows="3" ng-model="commentTextOnEvent" required></textarea>
+<!--comments-->
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-6">
+        <div class="post-comments">
+
+            <form>
+                <div class="form-group">
+                    <label for="comment">Your Comment</label>
+                    <textarea name="comment" id="comment" class="form-control" rows="3" ng-model="commentTextOnEvent" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-default" ng-disabled="commentTextOnEvent.length==0" ng-click="commentOnEvent(detailedEvent.eventId,commentTextOnEvent)">Comment</button>
+            </form>
+            <br/>
+            <strong>There are {{comments.length}} comments</strong>
+            <br/>
+            <div class="row" ng-repeat="c in comments">
+
+                <div class="media">
+                    <!-- first comment -->
+
+                    <div class="media-heading">
+                        <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#{{((comments.indexOf(c)+1)*12345)+2}}" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
                     </div>
-                    <button type="submit" class="btn btn-default" ng-disabled="commentTextOnEvent.length==0" ng-click="commentOnEvent(detailedEvent.eventId,commentTextOnEvent)">Comment</button>
-                </form>
-                <br/>
-                <strong>There are {{comments.length}} comments</strong>
-                <br/>
-                <div class="row" ng-repeat="c in comments">
 
-                    <div class="media">
-                        <!-- first comment -->
+                    <div class="panel-collapse collapse in" id={{((comments.indexOf(c)+1)*12345)+2}}>
 
-                        <div class="media-heading">
-                            <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#{{((comments.indexOf(c)+1)*12345)+2}}" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
-                        </div>
-
-                        <div class="panel-collapse collapse in" id={{((comments.indexOf(c)+1)*12345)+2}}>
-
-                            <!--  <div class="media-left">
-                                  <div class="vote-wrap">
-                                      <div class="save-post">
-                                          <a href="#"><span class="glyphicon glyphicon-star" aria-label="Save"></span></a>
-                                      </div>
-                                      <div class="vote up">
-                                          <i class="glyphicon glyphicon-menu-up"></i>
-                                      </div>
-                                      <div class="vote inactive">
-                                          <i class="glyphicon glyphicon-menu-down"></i>
-                                      </div>
+                        <!--  <div class="media-left">
+                              <div class="vote-wrap">
+                                  <div class="save-post">
+                                      <a href="#"><span class="glyphicon glyphicon-star" aria-label="Save"></span></a>
                                   </div>
-                                  &lt;!&ndash; vote-wrap &ndash;&gt;
-                              </div>-->
-                            <!-- media-left -->
+                                  <div class="vote up">
+                                      <i class="glyphicon glyphicon-menu-up"></i>
+                                  </div>
+                                  <div class="vote inactive">
+                                      <i class="glyphicon glyphicon-menu-down"></i>
+                                  </div>
+                              </div>
+                              &lt;!&ndash; vote-wrap &ndash;&gt;
+                          </div>-->
+                        <!-- media-left -->
 
 
-                            <div class="media-body">
-                                <p><small><cite><i>@{{c.user.firstName}}</i></cite></small><br>{{c.commentText}}</p>
-                                <div class="comment-meta">
+                        <div class="media-body">
+                            <p><small><cite><i>@{{c.user.firstName}}</i></cite></small><br>{{c.commentText}}</p>
+                            <div class="comment-meta">
               <span>
                         <span class="" role="button" data-toggle="collapse" href=#{{comments.indexOf(c)+1}} aria-expanded="false" aria-controls="collapseExample"><strong style="color:blue">Reply</strong></span>
                       </span>
-                                    <div class="collapse" id={{comments.indexOf(c)+1}}>
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="reply1">Your Reply</label>
-                                                <textarea name="reply1" id="reply1" class="form-control" rows="3" ng-model="replyText1" required></textarea>
-                                            </div>
-                                            <button type="submit" class="btn btn-default"  ng-disabled="replyText1.length==0" ng-click="sendReply(c.commentId,replyText1)">Reply</button>
-                                        </form>
-                                    </div>
+                                <div class="collapse" id={{comments.indexOf(c)+1}}>
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="reply1">Your Reply</label>
+                                            <textarea name="reply1" id="reply1" class="form-control" rows="3" ng-model="replyText1" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-default"  ng-disabled="replyText1.length==0" ng-click="sendReply(c.commentId,replyText1)">Reply</button>
+                                    </form>
                                 </div>
-                                <!-- comment-meta -->
-                                Number of replies : {{c.replies.length}}
-                                <div class="media">
-                                    <!-- answer to the first comment -->
+                            </div>
+                            <!-- comment-meta -->
+                            Number of replies : {{c.replies.length}}
+                            <div class="media">
+                                <!-- answer to the first comment -->
 
-                                    <div class="media-heading">
-                                        <button class="btn btn-default btn-collapse btn-xs" type="button" data-toggle="collapse" data-target=#{{((comments.indexOf(c)+2)*1000)+c.replies.indexOf(reply)+1}} aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
-                                    </div>
+                                <div class="media-heading">
+                                    <button class="btn btn-default btn-collapse btn-xs" type="button" data-toggle="collapse" data-target=#{{((comments.indexOf(c)+2)*1000)+c.replies.indexOf(reply)+1}} aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+                                </div>
 
-                                    <div class="panel-collapse collapse in" id={{((comments.indexOf(c)+2)*1000)+c.replies.indexOf(reply)+1}}>
+                                <div class="panel-collapse collapse in" id={{((comments.indexOf(c)+2)*1000)+c.replies.indexOf(reply)+1}}>
 
-                                        <!-- <div class="media-left">
-                                             <div class="vote-wrap">
-                                                 <div class="save-post">
-                                                     <a href="#"><span class="glyphicon glyphicon-star" aria-label="Save"></span></a>
-                                                 </div>
-                                                 <div class="vote up">
-                                                     <i class="glyphicon glyphicon-menu-up"></i>
-                                                 </div>
-                                                 <div class="vote inactive">
-                                                     <i class="glyphicon glyphicon-menu-down"></i>
-                                                 </div>
+                                    <!-- <div class="media-left">
+                                         <div class="vote-wrap">
+                                             <div class="save-post">
+                                                 <a href="#"><span class="glyphicon glyphicon-star" aria-label="Save"></span></a>
                                              </div>
-                                             &lt;!&ndash; vote-wrap &ndash;&gt;
-                                         </div>-->
-                                        <!-- media-left -->
+                                             <div class="vote up">
+                                                 <i class="glyphicon glyphicon-menu-up"></i>
+                                             </div>
+                                             <div class="vote inactive">
+                                                 <i class="glyphicon glyphicon-menu-down"></i>
+                                             </div>
+                                         </div>
+                                         &lt;!&ndash; vote-wrap &ndash;&gt;
+                                     </div>-->
+                                    <!-- media-left -->
 
-                                        <div ng-repeat="reply in c.replies">
-                                            <div class="media-body" >
-                                                <p><small><cite><i>@{{reply.user.firstName}}</i></cite></small><br>{{reply.replyText}}</p>
-                                                <!--<p>{{reply.user.firstName}}<br>{{reply.replyText}}</p>-->
-                                                <div class="comment-meta">
+                                    <div ng-repeat="reply in c.replies">
+                                        <div class="media-body" >
+                                            <p><small><cite><i>@{{reply.user.firstName}}</i></cite></small><br>{{reply.replyText}}</p>
+                                            <!--<p>{{reply.user.firstName}}<br>{{reply.replyText}}</p>-->
+                                            <div class="comment-meta">
                             <span>
                               <span class="" role="button" data-toggle="collapse" href=#{{((comments.indexOf(c)+1)*1000)+c.replies.indexOf(reply)}} aria-expanded="false" aria-controls="collapseExample"><strong style="color:blue">Reply</strong></span>
                             </span>
-                                                    <div class="collapse" id={{((comments.indexOf(c)+1)*1000)+c.replies.indexOf(reply)}}>
-                                                        <form>
-                                                            <div class="form-group">
-                                                                <label for="reply2">Your Reply</label>
-                                                                <textarea name="reply2" id="reply2" class="form-control" rows="3" ng-model="replyText2" required></textarea>
-                                                            </div>
-                                                            <button type="submit" class="btn btn-default" ng-disabled="replyText2.length==0" ng-click="sendReply(c.commentId,replyText2)">Reply</button>
-                                                        </form>
-                                                    </div>
+                                                <div class="collapse" id={{((comments.indexOf(c)+1)*1000)+c.replies.indexOf(reply)}}>
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="reply2">Your Reply</label>
+                                                            <textarea name="reply2" id="reply2" class="form-control" rows="3" ng-model="replyText2" required></textarea>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-default" ng-disabled="replyText2.length==0" ng-click="sendReply(c.commentId,replyText2)">Reply</button>
+                                                    </form>
                                                 </div>
-                                                <!-- comment-meta -->
                                             </div>
+                                            <!-- comment-meta -->
                                         </div>
                                     </div>
-                                    <!-- comments -->
-
                                 </div>
-                                <!-- answer to the first comment -->
+                                <!-- comments -->
 
                             </div>
-                        </div>
-                        <!-- comments -->
+                            <!-- answer to the first comment -->
 
+                        </div>
                     </div>
-                    <!-- first comment -->
+                    <!-- comments -->
+
                 </div>
+                <!-- first comment -->
             </div>
         </div>
-
-        <!--<div class="col-md-1"></div>-->
-    </div>
-    <div class="row">
-        <!--<div class="col-md-1"></div>-->
-        <div class="col-lg-10"><h4><b>Contact us :</b></h4></div>
-        <!--<div class="col-md-1"></div>-->
     </div>
 
-    <div class="row" ng-repeat="contact in detailedEvent.contact">
-        <!--<div class="col-md-1"></div>-->
-        <div class="col-lg-10">
-            <li><i>{{contact.contactType}} : {{contact.value}}</i></cite></small></li>
-        </div>
-        <!-- <div class="col-md-1">-->
+    <div class="col-md-1"></div>
+</div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10"><h4><b>Contact us :</b></h4></div>
+    <div class="col-md-1"></div>
+</div>
+
+<div class="row" ng-repeat="contact in detailedEvent.contact">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <li><i>{{contact.contactType}} : {{contact.value}}</i></cite></small></li>
+    </div>
+    <div class="col-md-1">
 
     </div>
 </div><!--container closed-->
+</div>
