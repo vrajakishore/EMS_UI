@@ -2,18 +2,6 @@
  * Created by mkishore on 5/4/2016.
  */
 
-routerApp.controller('searchByCategoryController', function($rootScope,$scope,SearchService, $http,$state) {
-
-
-    /* Search by only Category in search page */
-    $scope.url = 'json/event.json';
-    SearchService(callBackForCategorySearchEvents,$scope.url);
-    function callBackForCategorySearchEvents(data) {
-        $scope.event_data = data;
-        console.log("All category events data "+data);
-    }
-
-});
 
 routerApp.controller('searchByPopularityController', function($rootScope,$scope,SearchService, $http,$state) {
 

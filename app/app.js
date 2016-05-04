@@ -66,8 +66,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('events.eventsSearch',{
             url:'/Search',
-            templateUrl:'pages/events/search.html',
-            controller:'searchEventsController'
+            templateUrl:'pages/events/search.html'
+            //controller:'searchEventsController'
         })
 
         //nested view of search page in events
