@@ -154,7 +154,6 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             //controller:
         })
 
-
         .state('adminDashboard.adminAccountSetting',{
             url: '/adminAccountSetting',
             templateUrl: 'pages/dashboard/admin/adminAccountSetting.html'
@@ -162,6 +161,14 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('adminDashboard.eventRequest',{
             url: '/eventRequest',
             templateUrl: 'pages/dashboard/admin/eventRequest.html'
+        })
+        .state('adminDashboard.adminProfile',{
+            url: '/adminProfile',
+            templateUrl: 'pages/dashboard/admin/adminProfile.html'
+        })
+        .state('adminDashboard.adminUpcomingEvents',{
+            url: '/adminUpcomingEvents',
+            templateUrl: 'pages/dashboard/admin/adminUpcomingEvents.html'
         })
 
         .state('feedback',{

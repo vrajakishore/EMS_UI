@@ -10,6 +10,31 @@ routerApp.controller('adminDashboardController',function($scope,$state,$location
 
     //$scope.detailedEvent = $rootScope.detailedEvent;
 
+    /* Admin Edit Profile */
+
+
+
+
+
+
+
+    /* Admin change Password */
+    $scope.changePassword = function (newPassWord) {
+        $scope.linkForNewPwd = "http://din51002665:8181/EventManagement/changePassWord?user_id="+$rootScope.idOfUser+"&password="+newPassWord;
+        $http.get($scope.linkForNewPwd).then(function(resp){
+            //alert(resp.data);
+            $scope.changePwdSuccess();
+            $scope.LoginError = false;
+            setTimeout(function() {
+                $('#loginErrorDiv').fadeOut('fast');
+            }, 5000);
+        })
+    }
+
+
+
+
+    /* Admin profile */
 
     /*$scope.AdminProfileLink = "http://din51002665:8181/EventManagement/adetails?userId=" + $scope.userId;
     SearchService(callbackForAdminProfile, $scope.AdminProfileLink);

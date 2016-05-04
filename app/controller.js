@@ -94,7 +94,7 @@ routerApp.controller('dashBoardController', function($scope,$location,$state,$st
             $scope.userMessage = "Welcome user";
             //console.log(userid);
             $scope.dashboard = "DASHBOARD";
-            console.log(false);
+            
 
 
             /* login success for user */
