@@ -29,7 +29,6 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             params:{myParam: null},            //EVENT_ID is the parameter
             templateUrl: 'pages/events/eventDetails.html',
             controller:'eventDetailsController'
-
         })
 
         .state('events.bookNow',{
@@ -42,14 +41,12 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/movies',
             templateUrl: 'pages/events/eventsMovies.html',
             controller:'moviesEventsController'
-
         })
 
         .state('events.eventsStage', {
             url: '/stage',
             templateUrl: 'pages/events/eventsStage.html',
             controller:'stageEventsController'
-
         })
 
         .state('events.eventsMusic', {

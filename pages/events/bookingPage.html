@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h1>Booking Page<span class="pull-right label label-default">:)</span></h1>
+    <h1>Booking Page<span class="pull-right label label-default"></span></h1>
 </div>
 <div class="row"> <div class="col-md-6"><br><br><div class="col-md-6"><br><br></div></div></div>
 <div class="container" ng-repeat="a in detailedEvent">
@@ -9,7 +9,7 @@
             <!--    for image n other details-->
             <div class="row">
                 <div class="col-md-6">
-                    <img data-ng-src="{{detailedEvent.album.photoCollections[0].photoUrl}}"  height="300" width="400" >
+                    <img data-ng-src="{{detailedEvent.album.photoCollections[0].photoUrl}}"  height="150" width="150" >
                 </div>
                 <div class="col-md-6">
                     <h2>{{a.event_name}}</h2><br>
@@ -24,7 +24,21 @@
         </div>
         <div class="col-md-1"></div>
     </div>
-
+    <div class="col-md-5  well well-white" align="left">
+        <h3>Hurry up!!! Book Your Ticket Now</h3>
+        <table border="1">
+            <tr>
+                <th>Ticket Type</th>
+                <th>Price</th>
+                <th>Tickets available</th>
+            </tr>
+            <tr ng-repeat="ticket in detailedEvent.tickettype">
+                <td class="text-center">{{ticket.ticketType}}</td>
+                <td class="text-center">{{ticket.price}}</td>
+                <td class="text-center">{{ticket.availableSeats}}</td>
+            </tr>
+        </table>
+    </div>
     <!-- for description-->
     <div class="row">
         <div class="col-md-1"></div>
@@ -39,7 +53,7 @@
                 </select>
                 <br><!--<div ng-if="a.silverCurrentCapacity>0">-->
                 <div>
-                    Number of Tickets:<select ng-model="ticketCount" ng-change="getAmount(selectedTicketType,ticketCount)">
+                    Number of Tickets:&nbsp;<select ng-model="ticketCount" ng-change="getAmount(selectedTicketType,ticketCount)">
                     <option value="">-select-</option>
                     <option value=1>1</option>
                     <option value=2>2</option>
@@ -54,21 +68,7 @@
 
             <button ng-click="payNow()" class="btn btn-info">Pay Now</button>
         </div>
-        <div class="col-md-4  well well-white" align="center">
-            <h3>Hurry up!!! Book Your Ticket Now</h3>
-            <table border="1">
-                <tr>
-                    <th>Ticket Type</th>
-                    <th>Price</th>
-                    <th>Tickets available</th>
-                </tr>
-                <tr ng-repeat="ticket in detailedEvent.tickettype">
-                    <td class="text-center">{{ticket.ticketType}}</td>
-                    <td class="text-center">{{ticket.price}}</td>
-                    <td class="text-center">{{ticket.availableSeats}}</td>
-                </tr>
-            </table>
-        </div>
+
         <div class="col-md-1"></div>
     </div>
 
