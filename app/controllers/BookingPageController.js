@@ -18,9 +18,6 @@ routerApp.controller('BookingPageController',function($scope,$state,$location,$s
             $("#loginModal").modal()
         }
         else{
-
-
-
             $scope.bookingObject={};
             $scope.bookingObject.userId = $rootScope.uid;
             $scope.bookingObject.eventId = $rootScope.eventId;
