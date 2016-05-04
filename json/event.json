@@ -89,6 +89,186 @@
       "category_name" : "Events",
       "category_type" : "FREE"
     }
+  },
+  {
+    "event_id" : 1,
+    "event_name" : "Comic Con",
+    "event_date" : "23-Mar-2010",
+    "event_Certificate" : "UA",
+    "event_description" : "America events",
+    "event_image_url" : "America events.jpg",
+    "capacity" : {
+      "capacity_id" : 1,
+      "silver_capacity" : 200,
+      "gold_capacity" : 100,
+      "platinum_capacity" : 50,
+      "silver_current_capacity" : 200,
+      "gold_current_capacity" : 100,
+      "platinum_current_capacity" : 50
+    },
+    "event_status" : "Approved",
+    "event_time" : "18:00:00 IST",
+    "organiser" : {
+      "organiser_id" : 1,
+      "organiser_name" : "Kishore"
+    },
+    "price" :{
+      "price_id" : 1,
+      "price_gold" : "800.00",
+      "price_silver" : "500.00",
+      "price_platinum" : "1000.0"
+    },
+    "venue" : {
+      "venue_id" : 1,
+      "venue_name" : "Central   Mall",
+      "venue_city" : "Hyderabad"
+    },
+    "performer" : {
+      "performer_id" : 1 ,
+      "performer_first_name" : "Christian",
+      "performer_last_name" : "Bale",
+      "performer_dob" : "27-Mar-1985"
+    },
+    "Category":{
+      "category_id" : "1",
+      "category_name" : "Events",
+      "category_type" : "PAID"
+    }
+  },
+  {
+    "event_id" : 1,
+    "event_name" : "Comic Con",
+    "event_date" : "23-Mar-2010",
+    "event_Certificate" : "UA",
+    "event_description" : "America events",
+    "event_image_url" : "America events.jpg",
+    "capacity" : {
+      "capacity_id" : 1,
+      "silver_capacity" : 200,
+      "gold_capacity" : 100,
+      "platinum_capacity" : 50,
+      "silver_current_capacity" : 200,
+      "gold_current_capacity" : 100,
+      "platinum_current_capacity" : 50
+    },
+    "event_status" : "Approved",
+    "event_time" : "18:00:00 IST",
+    "organiser" : {
+      "organiser_id" : 1,
+      "organiser_name" : "Kishore"
+    },
+    "price" :{
+      "price_id" : 1,
+      "price_gold" : "800.00",
+      "price_silver" : "500.00",
+      "price_platinum" : "1000.0"
+    },
+    "venue" : {
+      "venue_id" : 1,
+      "venue_name" : "Central   Mall",
+      "venue_city" : "Hyderabad"
+    },
+    "performer" : {
+      "performer_id" : 1 ,
+      "performer_first_name" : "Christian",
+      "performer_last_name" : "Bale",
+      "performer_dob" : "27-Mar-1985"
+    },
+    "Category":{
+      "category_id" : "1",
+      "category_name" : "Events",
+      "category_type" : "PAID"
+    }
+  },
+  {
+    "event_id" : 1,
+    "event_name" : "Comic Con",
+    "event_date" : "23-Mar-2010",
+    "event_Certificate" : "UA",
+    "event_description" : "America events",
+    "event_image_url" : "America events.jpg",
+    "capacity" : {
+      "capacity_id" : 1,
+      "silver_capacity" : 200,
+      "gold_capacity" : 100,
+      "platinum_capacity" : 50,
+      "silver_current_capacity" : 200,
+      "gold_current_capacity" : 100,
+      "platinum_current_capacity" : 50
+    },
+    "event_status" : "Approved",
+    "event_time" : "18:00:00 IST",
+    "organiser" : {
+      "organiser_id" : 1,
+      "organiser_name" : "Kishore"
+    },
+    "price" :{
+      "price_id" : 1,
+      "price_gold" : "800.00",
+      "price_silver" : "500.00",
+      "price_platinum" : "1000.0"
+    },
+    "venue" : {
+      "venue_id" : 1,
+      "venue_name" : "Central   Mall",
+      "venue_city" : "Hyderabad"
+    },
+    "performer" : {
+      "performer_id" : 1 ,
+      "performer_first_name" : "Christian",
+      "performer_last_name" : "Bale",
+      "performer_dob" : "27-Mar-1985"
+    },
+    "Category":{
+      "category_id" : "1",
+      "category_name" : "Events",
+      "category_type" : "PAID"
+    }
+  },
+  {
+    "event_id" : 1,
+    "event_name" : "Comic Con",
+    "event_date" : "23-Mar-2010",
+    "event_Certificate" : "UA",
+    "event_description" : "America events",
+    "event_image_url" : "America events.jpg",
+    "capacity" : {
+      "capacity_id" : 1,
+      "silver_capacity" : 200,
+      "gold_capacity" : 100,
+      "platinum_capacity" : 50,
+      "silver_current_capacity" : 200,
+      "gold_current_capacity" : 100,
+      "platinum_current_capacity" : 50
+    },
+    "event_status" : "Approved",
+    "event_time" : "18:00:00 IST",
+    "organiser" : {
+      "organiser_id" : 1,
+      "organiser_name" : "Kishore"
+    },
+    "price" :{
+      "price_id" : 1,
+      "price_gold" : "800.00",
+      "price_silver" : "500.00",
+      "price_platinum" : "1000.0"
+    },
+    "venue" : {
+      "venue_id" : 1,
+      "venue_name" : "Central   Mall",
+      "venue_city" : "Hyderabad"
+    },
+    "performer" : {
+      "performer_id" : 1 ,
+      "performer_first_name" : "Christian",
+      "performer_last_name" : "Bale",
+      "performer_dob" : "27-Mar-1985"
+    },
+    "Category":{
+      "category_id" : "1",
+      "category_name" : "Events",
+      "category_type" : "PAID"
+    }
   }
 
 

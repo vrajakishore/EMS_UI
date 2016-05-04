@@ -7,39 +7,10 @@ routerApp.controller('eventsCtrl', function($rootScope,$scope,SearchService, $ht
     //console.log("controdadsa");
     $scope.url = 'json/event.json';
     SearchService(callBackForAllEvents,$scope.url);
-    
     function callBackForAllEvents(data) {
         $scope.event_data = data;
-
-        //$rootScope.eventID = data.eventId;
-        //console.log( data.eventId+" hi");
-
-        $scope.first_name = "kishore";
-
-        console.log(data);
+        console.log("All events data "+data);
     }
-    
-   /* $http.get('json/event.json').success(function (data){
-        $scope.event_data = data;
-
-        //$rootScope.eventID = data.eventId;
-        //console.log( data.eventId+" hi");
-
-        $scope.first_name = "kishore";
-
-        console.log(data);
-    });*/
-
-    $scope.eventDetails = function (g) {
-
-        //console.log($rootScope.eventId+" this is eventID")
-        console.log(g)
-        $state.go('.eventDetails',  {myParam:g});
-
-        
-    }
-        
-
 
     /*$scope.goBack = function(){
 

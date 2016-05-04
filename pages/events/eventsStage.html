@@ -1,37 +1,89 @@
 <div class="page-header">
     <h1>Stage Events<span class="pull-right label label-default">:)</span></h1>
+    <form class="search-container" action="#">
+        <input id="search-box" type="text" class="search-box" name="q" />
+        <label for="search-box"><span class="glyphicon glyphicon-search search-icon"></span></label>
+        <input type="submit" id="search-submit" />
+    </form>
 </div>
 
 
-<button uib-popover="I appeared on mouse enter hhjgjhghjg!" popover-trigger="mouseenter" type="button" class="btn btn-default">Mouseenter</button>
-<h1>{{first_name}}</h1>
+<div id="tour" class="bg-1">
+    <div class="container-fluid">
+        <div class="row text-center">
 
-<!--<h1>{{event_data.eventDate}}</h1>
 
-<h1>{{d}}</h1>-->
 
-<table class="table table-striped">
+            <div class="col-sm-4" ng-repeat="g in event_data">
+                <div class="thumbnail" >
+                    <div class="row pull-left"><span class="label label-danger">{{g.Category.category_type}}</span></div>
+                    <img src="{{g.event_image_rl}}" alt="{{g.venue.venue_city}}" width="400" height="300">
+                    <span class="label-danger">{{g.event_id}}</span>
+                    <p><strong>{{g.venue.venue_city}}</strong></p>
 
-    <tr ng-repeat="resource in event_data | filter:search">
+                    <p>{{g.event_date}}</p>
+                    <!--<button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>-->
 
-        <td>{{ resource.eventName }}</td>
-        <td>{{ resource.eventCertificate }}</td>
-        <td>{{ resource.eventDescription }}</td>
-       <!-- <td>
-            <img class="resize img-circle" ng-src="{{ resource.url }}">
-        </td>
+                    <!-- <a ui-sref=".eventDetails"><strong>Book/Details</strong></a>-->
+                    <button ui-sref=".eventDetails({myParam: g})" class="btn-default">Book/Details</button>
 
-        <td>
-            <div ng-repeat="date in resource.doj">
-                <h6>{{date.dd}}-{{date.mm}}-{{date.yyyy}}</h6>
+                    <br>
 
+                    <!--<div uib-popover="{{g.eventCertificate}}
+                            {{g.eventDescription}}
+                            {{g.eventTime}}
+                            {{g.organiser.organiserName}}
+                            {{g.performer.performerFirstName}}
+                            {{g.performer.performerLastName}}" popover-trigger="mouseenter" data-html="true"><span class="label label-default">More details</span>
+                    </div>-->
+
+                </div>
             </div>
-        </td>-->
-    </tr>
-</table>
 
-<div ng-repeat="r in event_data">
-    {{r.eventName}}
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="myModal" role="dialog">
+         <div class="modal-dialog">
+
+             &lt;!&ndash; Modal content&ndash;&gt;
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">×</button>
+                     <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+                 </div>
+                 <div class="modal-body">
+                     <form role="form">
+                         <div class="form-group">
+                             <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, Rs. 2000 per person</label>
+                             <input type="number" class="form-control" id="psw" placeholder="How many?">
+                         </div>
+                         <div class="form-group">
+                             <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+                             <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                         </div>
+                         <button type="submit" class="btn btn-block">Pay
+                             <span class="glyphicon glyphicon-ok"></span>
+                         </button>
+                     </form>
+                 </div>
+                 <div class="modal-footer">
+                     <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                         <span class="glyphicon glyphicon-remove"></span> Cancel
+                     </button>
+                     <p>Need <a href="#">Help?</a></p>
+                 </div>
+             </div>
+         </div>
+     </div>-->
 </div>
 
 
