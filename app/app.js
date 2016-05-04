@@ -92,15 +92,15 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('userDashboard', {
             url: '/userDashboard',
-            templateUrl: 'pages/dashboard/user/userdashboard.html'
-            //controller:'dashboardCtrl'
+            templateUrl: 'pages/dashboard/user/userdashboard.html',
+            controller:'userDashboardController'
 
         })
 
         .state('userDashboard.userAccountSetting', {
             url: '/userAccountSetting',
             templateUrl: 'pages/dashboard/user/userAccountSetting.html',
-            controller:'userAccountSettingsController'
+
 
         })
 
@@ -113,7 +113,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('userDashboard.userEventManagement', {
             url: '/userEventManagement',
             templateUrl: 'pages/dashboard/user/userEventManagement.html'
-            //controller:'dashboardCtrl'
+            // controller:'userDashboardController'
 
         })
 

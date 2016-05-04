@@ -27,27 +27,27 @@
 
                     <div class="input-group well-sm">
                         <label for="edate">Event Date</label>
-                        <input type="edate" ng-model="date" class="form-control" placeholder="Event Date" required>
+                        <input type="edate" ng-model="event.date" class="form-control" placeholder="Event Date" required>
 
                     </div>
 
                     <div class="input-group well-sm">
 
                         <label for="etime">Event Time</label>
-                        <input type="time" ng-model="etime" class="form-control" placeholder="Event Time" required>
+                        <input type="time" ng-model="event.time" class="form-control" placeholder="Event Time" required>
 
                     </div>
 
                     <div class="input-group well-sm">
 
                        <label for="edesc">Event Description</label>
-                        <input type="text" ng-model="edesc" class="form-control" placeholder="Event Description" required>
+                        <input type="text" ng-model="event.desc" class="form-control" placeholder="Event Description" required>
 
                     </div>
                     <div class="input-group well-sm">
 
                         <label for="Ecertificate">Select Event Certificate</label>
-                        <select ng-model="ecertificate"  required>
+                        <select ng-model="event.certificate"  required>
 
                             <option value="PG">PG</option>
                             <option value="UA">UA</option>
@@ -59,39 +59,39 @@
                     <div class="input-group well-sm">
 
                         <label for="capacity">Capacity</label>
-                        <input type="text" ng-model="capacity" class="form-control" placeholder="Max. no of persons " required>
+                        <input type="text" ng-model="evnet.capacity" class="form-control" placeholder="Max. no of persons " required>
 
                     </div>
                     <div class="input-group well-sm">
 
                         <label for="oname">Organiser's Name</label>
-                        <input type="text" ng-model="oname" class="form-control" placeholder="Organiser's name" required>
+                        <input type="text" ng-model="event.oname" class="form-control" placeholder="Organiser's name" required>
 
                     </div>
                     <div class="input-group well-sm">
 
                         <label for="pname">Performer's Name</label>
-                        <input type="text" ng-model="pname" class="form-control" placeholder="Performer Name" required>
+                        <input type="text" ng-model="event.pname" class="form-control" placeholder="Performer Name" required>
 
                     </div>
 
                     <div class="input-group well-sm">
 
                         <label for="venue">Event Venue</label>
-                        <input type="text" ng-model="venue" class="form-control" placeholder="Event venue" required>
+                        <input type="text" ng-model="event.venue" class="form-control" placeholder="Event venue" required>
 
                     </div>
                     <div class="input-group well-sm">
 
                         <label for="price">Event Price</label>
-                        <input type="text" ng-model="price" class="form-control" placeholder="Event Price in Rs" required>
+                        <input type="text" ng-model="event.price" class="form-control" placeholder="Event Price in Rs" required>
 
                     </div>
 
                     <div class="input-group well-sm">
 
                         <label for="catname">Select Category Name</label>
-                        <select ng-model="catname" required>
+                        <select ng-model="event.catname" required>
 
                             <option value="Movies">Movies</option>
                             <option value="Sports">Sports</option>
@@ -104,7 +104,7 @@
                     <div class="input-group well-sm">
 
                         <label for="catype">Select Payament Mode</label>
-                        <select ng-model="catype" required>
+                        <select ng-model="event.catype" required>
 
                             <option value="Free">Free</option>
                             <option value="Paid">Paid</option>
@@ -114,7 +114,7 @@
                     </div>
 
                     <div class="input-group well-sm">
-                        <input type="submit" class=" btn btn-primary">
+                        <input type="submit" ng-click="createEvent(event)"class=" btn btn-primary">
                     </div>
                    </form>
                 </div>
@@ -127,16 +127,16 @@
                     <div class="input-group well-sm">
 
                         <label for="ename">Event Name</label>
-                        <input type="text" ng-model="Mename" class="form-control" placeholder="Event Name" required>
+                        <input type="text" ng-model="event1.Mename" class="form-control" placeholder="Event Name" required>
                     </div>
                     <div class="input-group well-sm">
                         <label for="edate">Event Date</label>
-                        <input type="Medate" ng-model="date" class="form-control" placeholder="Event Date" required>
+                        <input type="Medate" ng-model="event1.date" class="form-control" placeholder="Event Date" required>
 
                     </div>
 
                     <div class="input-group well-sm">
-                        <input type="submit" class=" btn btn-primary">
+                        <input type="submit"ng-click="modifyEvent(event1)" class=" btn btn-primary">
                     </div>
                     </form>
                 </div>
@@ -147,15 +147,15 @@
                     <div class="input-group well-sm">
 
                         <label for="ename">Event Name</label>
-                        <input type="text" ng-model="Mename" class="form-control" placeholder="Event Name" required>
+                        <input type="text" ng-model="event2.Mename" class="form-control" placeholder="Event Name" required>
                     </div>
                     <div class="input-group well-sm">
                         <label for="edate">Event Date</label>
-                        <input type="Medate" ng-model="date" class="form-control" placeholder="Event Date" required>
+                        <input type="Medate" ng-model="event2.date" class="form-control" placeholder="Event Date" required>
 
                     </div>
                     <div class="input-group well-sm">
-                        <input type="submit" class=" btn btn-primary">
+                        <input type="submit" ng-click="removeEvent(event2)" class=" btn btn-primary">
                     </div>
                     </form>
                 </div>
