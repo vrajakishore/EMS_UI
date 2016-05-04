@@ -1,5 +1,5 @@
-<div class="page-header">
-    <h1>Event Details<span class="pull-right label label-default">:)</span></h1>
+<div class="container-fluid">
+    <h1>Event Details<span class=" label label-default"></span></h1>
 </div>
 
 <!--<button class="btn-default" ui-sref="events"><strong>back</strong></button>-->
@@ -7,30 +7,14 @@
 
 <div class="container" ng-repeat="a in detailedEvent">
 
-   <!-- <div ng-repeat="g in event_data">
-        {{g.eventCertificate}}
-        {{g.eventDescription}}
-        {{g.eventTime}}
-        {{g.organiser.organiserName}}
-        {{g.performer.performerFirstName}}
-        {{g.performer.performerLastName}}</div>-->
-    hhhhh
-   <!-- <div ng-repeat="a in detailedEvent">
-    {{a.eventCertificate}}
-        {{a.eventDescription}}
-        {{a.eventTime}}
-        {{a.organiser.organiserName}}
-        {{a.performer.performerFirstName}}
-        {{a.performer.performerLastName}}
-    </div>-->
 
     <div class="row" >
         <div class="col-md-1"></div>
-        <div class="col-md-10 text-justify" >
+        <div class="col-md-9 text-justify" >
             <!--    for image n other details-->
             <div class="row">
                 <div class="col-md-6">
-                    <img data-ng-src="{{detailedEvent.album.photoCollections[0].photoUrl}}"  height="300" width="400" >
+                    <img data-ng-src="{{detailedEvent.album.photoCollections[0].photoUrl}}"  height="200" width="190" >
                 </div>
                 <div class="col-md-4 ">
                     <!--<h2>{{detailedEvent.eventId}}</h2><br>-->
@@ -55,12 +39,12 @@
     <br><br>
     <!-- for description & Schedule-->
     <div class="row container-fluid">
-        <div class="col-md-1"></div>
-        <div class=" col-md-6 text-justify"><!-- for description-->
+        <div class="col-sm-3"></div>
+        <div class=" col-sm-3 "><!-- for description-->
             <h3 class="text-left">Description:</h3><br>
             <p>{{a.event_description}}</p>
         </div>
-        <div class="col-md-4 well well-lg"><!-- for Schedule-->
+        <div class="col-sm-5 well well-lg"><!-- for Schedule-->
             <h3 align="center">Schedule</h3>
             <ul class="list-group">
                 <li class="list-group-item">
@@ -79,7 +63,7 @@
         <div class="col-md-10">
             <div class="col-md-4">
                 <div  align="center">
-                    <img class="img-circle" data-ng-src="{{performer.photoUrl}}" alt="Performer Image" width="200px" height="200px"><br>
+                    <img class="img-circle" data-ng-src="{{performer.photoUrl}}" alt="Performer Image" width="150px" height="150px"><br>
                     <strong>{{a.performer.performer_first_name}}&nbsp;&nbsp;&nbsp;{{a.performer.performer_last_name}}</strong>
                 </div>
             </div>
@@ -100,7 +84,7 @@
 <!--comments-->
 <div class="row">
     <div class="col-md-1"></div>
-    <div class="col-md-10">
+    <div class="col-md-6">
         <div class="post-comments">
 
             <form>
