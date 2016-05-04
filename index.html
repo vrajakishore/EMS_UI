@@ -155,46 +155,70 @@
                                 <!-- Sign Up Form -->
                                 <!-- Text input-->
                                 <div class="control-group">
+                                    <label class="control-label" for="First Name">First Name:</label>
+                                    <div class="controls">
+                                        <input id="first name" type="text" name="firstname" ng-model="signUp.firstName" class="form-control" type="text"  class="input-large" required="">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="Last Name">Last Name:</label>
+                                    <div class="controls">
+                                        <input id="Last Name" name="Last Name" tyep="text" ng-model="signUp.lastName" class="form-control" type="text"  class="input-large" required="">
+                                    </div>
+                                </div>
+                                <div class="control-group">
                                     <label class="control-label" for="Email">Email:</label>
                                     <div class="controls">
-                                        <input id="Email" name="Email" class="form-control" type="text" placeholder="JoeSixpack@sixpacksrus.com" class="input-large" required="">
+                                        <input id="Email" name="Email" type="email" class="form-control" type="text"  class="input-large" required="">
                                     </div>
                                 </div>
 
                                 <!-- Text input-->
-                                <div class="control-group">
-                                    <label class="control-label" for="userid">Alias:</label>
-                                    <div class="controls">
-                                        <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
-                                    </div>
-                                </div>
+
 
                                 <!-- Password input-->
                                 <div class="control-group">
                                     <label class="control-label" for="password">Password:</label>
                                     <div class="controls">
-                                        <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                                        <input id="password" name="password" class="form-control" type="password" class="input-large" required="">
                                         <em>1-8 Characters</em>
                                     </div>
                                 </div>
-
-                                <!-- Text input-->
                                 <div class="control-group">
-                                    <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+                                    <label class="control-label" for="Date Of Birth">Date Of Birth:</label>
                                     <div class="controls">
-                                        <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+                                        <input id="Date Of Birth" name="Date Of Birth" type="date" ng-model="signUp.date" class="form-control" type="text"  class="input-large" required="">
                                     </div>
                                 </div>
-
+                                <div class="control-group">
+                                    <label class="control-label" for="Contact Number">Contact Number:</label>
+                                    <div class="controls">
+                                        <input id="Contact Number" name="Contact Number" type="number" ng-model="signUp.contact" class="form-control" type="text"  class="input-large" required="">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="Address">Address:</label>
+                                    <div class="controls">
+                                        <input id="Address" name="Address" type="text" ng-model="signUp.address" class="form-control" type="text"  class="input-large" required="">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="Image Url">Image Url:</label>
+                                    <div class="controls">
+                                        <input id="Image Url" name="Image Url" type="url" ng-model="signUp.imageUrl" class="form-control" type="text"  class="input-large" required="">
+                                    </div>
+                                </div>
                                 <!-- Multiple Radios (inline) -->
                                 <br>
                                 <div class="control-group">
-                                    <label class="control-label" for="humancheck">Humanity Check:</label>
+                                    <label class="control-label" for="role">Role:</label>
                                     <div class="controls">
-                                        <label class="radio inline" for="humancheck-0">
-                                            <input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked">I'm a Robot</label>
-                                        <label class="radio inline" for="humancheck-1">
-                                            <input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human</label>
+                                        <select  ng-model="signUp.role" required>
+                                            <option value="Admin">Admin</option>
+                                            <option value="Oganiser">Organiser</option>
+                                            <option value="User">User</option>
+                                        </select>
+
                                     </div>
 
                                 </div>
@@ -203,7 +227,7 @@
                                 <div class="control-group">
                                     <label class="control-label" for="confirmsignup"></label>
                                     <div class="controls">
-                                        <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+                                        <button id="confirmsignup" ng-click="#" name="confirmsignup" class="btn btn-success">Sign Up</button>
                                     </div>
                                 </div>
                             </fieldset>
