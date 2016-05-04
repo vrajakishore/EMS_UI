@@ -1,5 +1,7 @@
-<div class="container-fluid">
-    <h1>Event Details<span class=" label label-default"></span></h1>
+<div class="wrapper">
+<h1>Event Details<span class=" label label-default"></span></h1><div class="container-fluid">
+
+
 </div>
 
 <!--<button class="btn-default" ui-sref="events"><strong>back</strong></button>-->
@@ -40,7 +42,7 @@
     <!-- for description & Schedule-->
     <div id="container">
         <div class="col-sm-3"></div>
-        <div id="left"><!-- for description-->
+        <div><!-- for description-->
             <h3 class="text-left">Description:</h3><br>
             <p>{{a.event_description}}</p>
         </div>
@@ -74,9 +76,9 @@
 
     <!--Rating-->
     <div class="row">
-        <div class="col-md-1"></div>
+        <div class="col-sm-1"></div>
         <div class="col-md-10">
-            <div ng-init="rating = 0"><h4>Give your Rating : <uib-rating ng-model="rating" ng-change="sendRating(rating)" max="5" state-on="'glyphicon-star'" state-off="'glyphicon-star-empty'" aria-labelledby="custom-icons-1"></uib-rating> <b>(<i>Rate:</i> {{rating}})</b></h4></div>
+            <div ng-init="rating = 0"><h4> Rating : <uib-rating ng-model="rating" ng-change="sendRating(rating)" max="5" state-on="'glyphicon-star'" state-off="'glyphicon-star-empty'" aria-labelledby="custom-icons-1"></uib-rating> <b>(<i>Rate:</i> {{rating}})</b></h4></div>
         </div>
     </div>
 </div>
@@ -222,3 +224,4 @@
 
     </div>
 </div><!--container closed-->
+</div>
