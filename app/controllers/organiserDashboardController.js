@@ -4,7 +4,7 @@
 
 
 
-routerApp.controller('userDashboardController',function($scope,$state,$location,$stateParams,$rootScope,$http,$window) {
+routerApp.controller('organiserDashboardController',function($scope,$state,$location,$stateParams,$rootScope,$http,$window) {
 
 //Account Settings
     if(!$rootScope.isLogin){

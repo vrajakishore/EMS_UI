@@ -170,7 +170,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('organiserDashboard', {
             url: '/organiserDashboard',
             templateUrl: 'pages/dashboard/organiser/organiserdashboard.html',
-                      controller:'organiserDashboardController'
+            controller:'organiserDashboardController'
 
         })
 
