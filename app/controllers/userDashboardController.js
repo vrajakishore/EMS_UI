@@ -46,8 +46,8 @@ routerApp.controller('userDashboardController',function($scope,$state,$location,
             $rootScope.upcomingEventsData = data;
             console.log($rootScope.upcomingEventsData);
         }
-        $scope.userUpcomingEventsLink = "json/upcomingEvents.json";
-        SearchService(callbackForUpcomingEvents, $scope.userUpcomingEventsLink);
+        $scope.userUpcomingEventsUrl = "json/upcomingEvents.json";
+        SearchService(callbackForUpcomingEvents, $scope.userUpcomingEventsUrl);
 
         /* User History */
 
@@ -56,8 +56,8 @@ routerApp.controller('userDashboardController',function($scope,$state,$location,
             $rootScope.userHistoryData = data;
             console.log($rootScope.userHistoryData);
         }
-        $scope.userHistoryData = "json/userHistory.json";
-        SearchService(callbackForUserHistory, $scope.userHistoryData);
+        $scope.userHistoryUrl = "json/userHistory.json";
+        SearchService(callbackForUserHistory, $scope.userHistoryUrl);
 
 
     }
