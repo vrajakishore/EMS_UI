@@ -1,14 +1,22 @@
- <div class="container">
-
-            &nbsp; &nbsp; &nbsp; &nbsp;    <div class="btn-group ">
-                    <a ui-sref=".popularity({myParam: g})" class="btn btn-primary" >By Popularity</a>
-                    <a ui-sref=".certificate" class="btn btn-primary">By Certificate</a>
-                    <a ui-sref=".venue" class="btn btn-primary">By Venue</a>
-                    <a ui-sref=".performer" class="btn btn-primary">By Performer</a>
-                </div>
-            </div>
-
-            <div ui-view>
+<div class="col-sm-7">
 
 
-            </div>
+    <div class="text-center jumbotron" style="background-color: rgba(255, 255, 1191, 0.5)">
+
+      <h2> <font color="#00008b"> You Can Search Your Favourite Events Just by One Tap Here...</font></h2>
+
+    </div>
+</div>
+<div class="container">
+
+      <div class="btn-group ">
+    <a ui-sref=".popularity({myParam: g})" class="btn btn-primary" >By Popularity</a>
+    <a ui-sref=".certificate" class="btn btn-primary">By Certificate</a>
+    <a ui-sref=".venue" class="btn btn-primary">By Venue</a>
+    <a ui-sref=".performer" class="btn btn-primary">By Performer</a>
+</div>
+<div ui-view>
+
+
+</div>
+    </div>
