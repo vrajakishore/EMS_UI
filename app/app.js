@@ -177,33 +177,33 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('organiserDashboard.organiserAccountSetting', {
             url: '/organiserAccountSetting',
             templateUrl: 'pages/dashboard/organiser/organiserAccountSetting.html'
-            //controller:'userAccountSettingsController'
+
 
         })
 
         .state('organiserDashboard.organiserUpcomingEvents', {
             url: '/organiserUpcomingEvents',
             templateUrl: 'pages/dashboard/organiser/organiserUpcomingEvents.html'
-            //controller:'dashboardCtrl'
+
 
         })
         .state('organiserDashboard.organiserEventManagement', {
          url: '/organiserEventManagement',
          templateUrl: 'pages/dashboard/organiser/organiserEventManagement.html'
-         //controller:'dashboardCtrl'
+
 
          })
 
         .state('organiserDashboard.organiserProfile', {
             url: '/organiserProfile',
             templateUrl: 'pages/dashboard/organiser/organiserProfile.html'
-            //controller:'dashboardCtrl'
+
 
         })
         .state('organiserDashboard.organiserTransaction', {
             url: '/organiserTransaction',
             templateUrl: 'pages/dashboard/organiser/organiserTransactionHistory.html'
-            //controller:'dashboardCtrl'
+
 
         })
 
