@@ -107,7 +107,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('userDashboard', {
             url: '/userDashboard',
             templateUrl: 'pages/dashboard/user/userdashboard.html',
-            //controller:'dashboardCtrl'
+            controller:'userDashboardController'
 
         })
 
