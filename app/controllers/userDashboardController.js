@@ -6,7 +6,10 @@
 routerApp.controller('userDashboardController',function($scope,$state,$location,$stateParams,$rootScope,$http,$window) {
 
 //Account Settings
-        if($rootScope.isLogin) {
+    if(!$rootScope.isLogin){
+        $("#loginModal").modal()
+    }
+    else{
 
             $scope.changePassword = function (Details) {
 
