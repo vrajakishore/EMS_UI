@@ -23,24 +23,24 @@
                         <form>
                         <div class="input-group well-sm">
 
-                         <input type="text" class="form-control" value={{uid}} disabled>
+                         <input type="text" class="form-control"  value={{uid}} readonly>
 
                         </div>
 
                         <div class="input-group well-sm">
-                            <input type="password" ng-model="change.currentpass" class="form-control" placeholder="Current Password" required>
-
-                        </div>
-
-                        <div class="input-group well-sm">
-
-                            <input type="password" ng-model="change.newpass" class="form-control" placeholder="New Password" required>
+                            <input type="password" ng-model="change.currentPassword" class="form-control" placeholder="Current Password" required>
 
                         </div>
 
                         <div class="input-group well-sm">
 
-                            <input type="password" ng-model="change.retpass" class="form-control" placeholder="Retype Password" required>
+                            <input type="password" ng-model="change.newPassword" class="form-control" placeholder="New Password" required>
+
+                        </div>
+
+                        <div class="input-group well-sm">
+
+                            <input type="password" ng-model="change.retypePassword" class="form-control" placeholder="Retype Password" required>
 
                         </div>
 
@@ -57,17 +57,17 @@
                         <form>
                         <div class="input-group well-sm">
 
-                            <input type="text" ng-model="edit.fname" class="form-control" placeholder="First Name" name="fname" required>
+                            <input type="text" ng-model="edit.fIrstName" class="form-control" placeholder="First Name" name="fname" required>
                         </div>
 
                         <div class="input-group well-sm">
-                            <input type="text" ng-model="edit.lname" class="form-control" placeholder="Last Name" name="lname" required>
+                            <input type="text" ng-model="edit.lastName" class="form-control" placeholder="Last Name" name="lname" required>
 
                         </div>
 
                         <div class="input-group well-sm">
 
-                            <input type="date" ng-model="edit.dob" class="form-control" placeholder="Date Of Birth" name="dob" required>
+                            <input type="date" ng-model="edit.dateOfBirth" class="form-control" placeholder="Date Of Birth" name="dob" required>
 
                         </div>
 
@@ -79,7 +79,7 @@
 
                         <div class="input-group well-sm">
 
-                            <input type="url" ng-model="edit.Iurl" class="form-control" placeholder="Image Url" name="Iurl" required>
+                            <input type="url" ng-model="edit.imageUrl" class="form-control" placeholder="Image Url" name="Iurl" required>
 
                         </div>
 
@@ -116,7 +116,7 @@
                         <form>
                         <div class="input-group well-sm">
                             <h3>Why you want to Deactivate?</h3>
-                            <select ng-model="deactivate.deact" required>
+                            <select ng-model="deactivate.deactivateReason" required>
                                 <option value="I am not happy">I am not happy</option>
                                 <option value="I have an another account">I have an another account</option>
                                 <option value="I have Privacy Issues">I have Privacy Issues</option>

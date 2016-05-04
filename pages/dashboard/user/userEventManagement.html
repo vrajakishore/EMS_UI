@@ -22,7 +22,7 @@
                     <div class="input-group well-sm">
 
                         <label for="ename">Event Name</label>
-                        <input type="text" ng-model="ename" class="form-control" placeholder="Event Name" required>
+                        <input type="text" ng-model="event.eventName" class="form-control" placeholder="Event Name" required>
                     </div>
 
                     <div class="input-group well-sm">
@@ -41,7 +41,7 @@
                     <div class="input-group well-sm">
 
                        <label for="edesc">Event Description</label>
-                        <input type="text" ng-model="event.desc" class="form-control" placeholder="Event Description" required>
+                        <input type="text" ng-model="event.description" class="form-control" placeholder="Event Description" required>
 
                     </div>
                     <div class="input-group well-sm">
@@ -59,19 +59,19 @@
                     <div class="input-group well-sm">
 
                         <label for="capacity">Capacity</label>
-                        <input type="text" ng-model="evnet.capacity" class="form-control" placeholder="Max. no of persons " required>
+                        <input type="text" ng-model="event.capacity" class="form-control" placeholder="Max. no of persons " required>
 
                     </div>
                     <div class="input-group well-sm">
 
                         <label for="oname">Organiser's Name</label>
-                        <input type="text" ng-model="event.oname" class="form-control" placeholder="Organiser's name" required>
+                        <input type="text" ng-model="event.organiserName" class="form-control" placeholder="Organiser's name" required>
 
                     </div>
                     <div class="input-group well-sm">
 
                         <label for="pname">Performer's Name</label>
-                        <input type="text" ng-model="event.pname" class="form-control" placeholder="Performer Name" required>
+                        <input type="text" ng-model="event.performerName" class="form-control" placeholder="Performer Name" required>
 
                     </div>
 
@@ -91,7 +91,7 @@
                     <div class="input-group well-sm">
 
                         <label for="catname">Select Category Name</label>
-                        <select ng-model="event.catname" required>
+                        <select ng-model="event.categoryName" required>
 
                             <option value="Movies">Movies</option>
                             <option value="Sports">Sports</option>
@@ -104,7 +104,7 @@
                     <div class="input-group well-sm">
 
                         <label for="catype">Select Payament Mode</label>
-                        <select ng-model="event.catype" required>
+                        <select ng-model="event.categoryType" required>
 
                             <option value="Free">Free</option>
                             <option value="Paid">Paid</option>
