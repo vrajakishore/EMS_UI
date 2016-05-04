@@ -38,48 +38,62 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             controller : 'BookingPageController'
         })
 
-
         .state('events.eventsMovies', {
             url: '/movies',
             templateUrl: 'pages/events/eventsMovies.html',
-            controller:'jaffa'
+            controller:'moviesEventsController'
 
         })
+
         .state('events.eventsStage', {
             url: '/stage',
-            templateUrl: 'pages/events/eventsStage.html'
+            templateUrl: 'pages/events/eventsStage.html',
+            controller:'stageEventsController'
 
         })
+
         .state('events.eventsMusic', {
             url: '/music',
-            templateUrl: 'pages/events/eventsMusic.html'
+            templateUrl: 'pages/events/eventsMusic.html',
+            controller:'musicEventsController'
         })
+
         .state('events.eventsSports', {
             url: '/sports',
-            templateUrl: 'pages/events/eventsSports.html'
+            templateUrl: 'pages/events/eventsSports.html',
+            controller:'sportsEventsController'
         })
+
         .state('events.eventsSearch',{
             url:'/Search',
-            templateUrl:'pages/events/search.html'
+            templateUrl:'pages/events/search.html',
+            controller:'searchEventsController'
         })
 
         //nested view of search page in events
 
         .state('events.eventsSearch.popularity',{
             url:'/SearchbyPopularity',
-            templateUrl:'pages/events/popularitySearch.html'
+            templateUrl:'pages/events/popularitySearch.html',
+            controller:'searchByPopularityController'
         })
+
         .state('events.eventsSearch.certificate',{
             url:'/SearchByCertificate',
-            templateUrl:'pages/events/certificateSearch.html'
+            templateUrl:'pages/events/certificateSearch.html',
+            controller:'searchCertificateController'
         })
+
         .state('events.eventsSearch.venue',{
             url:'/SearchbyVenue',
-            templateUrl:'pages/events/venueSearch.html'
+            templateUrl:'pages/events/venueSearch.html',
+            controller:'searchByVenueController'
         })
+
         .state('events.eventsSearch.performer',{
             url:'/SearchByPerformer',
-            templateUrl:'pages/events/performerSearch.html'
+            templateUrl:'pages/events/performerSearch.html',
+            controller:'searchPerformerController'
         })
 
 
@@ -93,14 +107,14 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('userDashboard', {
             url: '/userDashboard',
             templateUrl: 'pages/dashboard/user/userdashboard.html',
-            controller:'userDashboardController'
+            //controller:'dashboardCtrl'
 
         })
 
         .state('userDashboard.userAccountSetting', {
             url: '/userAccountSetting',
-            templateUrl: 'pages/dashboard/user/userAccountSetting.html',
-
+            templateUrl: 'pages/dashboard/user/userAccountSetting.html'
+            //controller:'userAccountSettingsController'
 
         })
 
@@ -113,7 +127,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('userDashboard.userEventManagement', {
             url: '/userEventManagement',
             templateUrl: 'pages/dashboard/user/userEventManagement.html'
-            // controller:'userDashboardController'
+            //controller:'dashboardCtrl'
 
         })
 
@@ -135,7 +149,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('adminDashboard',{
             url: '/adminDashboard',
-            templateUrl: 'pages/dashboard/admin/adminDashboard.html'
+            templateUrl: 'pages/dashboard/admin/adminDashboard.html',
+            //controller:
         })
 
 
