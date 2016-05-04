@@ -36,12 +36,16 @@ routerApp.controller('dashBoardController', function($scope,$location,$state,$st
 
     $scope.login = function(userDetails){
 
-        console.log(userDetails);
+        //console.log(userDetails);
+
+
 
 
         $rootScope.uid = userDetails.userid;
+        $rootScope.password = userDetails.password;
 
-        if(userDetails.userid=="kishore@gmail.com"&&userDetails.password=="kishore"){
+        console.log("user details "+$rootScope.uid+" "+$rootScope.password);
+        if($rootScope.userid=="kishore@gmail.com"&&$rootScope.password=="kishore"){
             $rootScope.isLogin = true;
 
 
@@ -58,8 +62,28 @@ routerApp.controller('dashBoardController', function($scope,$location,$state,$st
                 { type: 'success', msg: 'Well done! You successfully logged in Admin.' }
             ];
         }
-        else{
+        else if($rootScope.uid=="nitin"&&$rootScope.password=="nitin"){
+
+            console.log("organizer logged");
+
             $rootScope.isLogin = true;
+            $scope.menuLog = "LOGGED IN";
+            $rootScope.dashboardPage = "organiserDashboard";
+            $state.go('organiserDashboard');
+            $scope.organiserMessage = "Welcome organizer";
+            $scope.dashboard = "DASHBOARD";
+            console.log(true);
+
+            /*Login success for organizer*/
+            $scope.alerts = [
+                { type: 'success', msg: 'Well done! You successfully logged in Organizer.' }
+            ];
+
+        }
+        else if(($rootScope.uid=="dimple"&&$rootScope.password=="dimple")||($rootScope.uid=="rajdeep"&&$rootScope.password=="rajdeep")){
+            $rootScope.isLogin = true;
+
+            console.log("user logged");
 
             $scope.menuLog = "LOGGED IN";
             $rootScope.dashboardPage = "userDashboard";

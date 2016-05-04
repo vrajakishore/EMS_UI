@@ -25,6 +25,28 @@ routerApp.controller('eventDetailsController', function($scope,$location,$state,
         console.log("EventId is : ----" + $rootScope.eventId);
     }*/
 
+//////////////////////////////////////////////////////////////////////////////////////////
+
+    /* Rating section works here */
+
+
+    $scope.ratingURL = 'http://din52002787:9999/BME/showDislikes?name='+$rootScope.eventId;
+    //console.log($scope.commentsURL);
+    SearchService(callbackForRating,$scope.ratingURL);
+
+    function callbackForRating(data){
+        /*console.log("IN CALL BACK OF COMMENTS");*/
+        $rootScope.rating =  data;
+        console.log("rating "+$rootScope.rating);
+    };
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /* Comment section works here */
+
+    $scope.commentOnEvent = function(commentsBox){
+        console.log(commentsBox);
+
+    }
 
    /* $scope.commentsURL = 'http://din51002665:8181/EventManagement/findComment?eventId='+$rootScope.eventId;*/
 
@@ -37,7 +59,7 @@ routerApp.controller('eventDetailsController', function($scope,$location,$state,
         $rootScope.comments =  data;
         console.log("comments "+$rootScope.comments);
     };
-
+ /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
     

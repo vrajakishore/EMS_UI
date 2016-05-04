@@ -28,18 +28,6 @@ routerApp.controller('userDashboardController',function($scope,$state,$location,
                 console.log(Details);
 
             }
-//Event Management
-            $scope.createEvent = function (Details) {
 
-                console.log(Details);
-            }
-
-            $scope.modifyEvent = function (Details) {
-
-                console.log(Details);
-            }
-            $scope.removeEvent = function (Details) {
-                console.log(Details);
-            }
         }
 });
