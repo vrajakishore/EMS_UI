@@ -77,7 +77,7 @@
 
                         <div class="input-group well-sm">
 
-                            <input type="url" ng-model="adminrEdit.image" class="form-control" placeholder="Image Url" name="Iurl" required>
+                            <input type="url" ng-model="adminrEdit.image" class="form-control" placeholder="Image Url" name="Image" required>
 
                         </div>
 
@@ -94,7 +94,7 @@
 
                         <div class="input-group well-sm">
 
-                            <select  ng-model="adminEdit.security_question" required>
+                            <select class="form-control"  ng-model="adminEdit.security_question" required>
 
                                 <option value="Name of your first pet?">Name of your first pet?</option>
                                 <option value="Mother's maiden name?">Mother's maiden name?</option>
@@ -104,7 +104,9 @@
                             </select>
 
                         </div>
-                        <div class="input-group well-sm">
+
+
+                       <div  class="input-group well-sm">
 
                             <input type="password" ng-model="adminEdit.security_answer" class="form-control" placeholder="Security Answer" name="security_answer" required>
 
@@ -112,10 +114,11 @@
 
                         <div class="input-group well-sm">
 
-                            <select  ng-model="adminEdit.role" required>
+                            <select class="form-control"  ng-model="adminEdit.role" required>
 
                                 <option value="Oganiser">Organiser</option>
                                 <option value="User">User</option>
+                                <option value="Admin">Admin</option>
                             </select>
 
                         </div>

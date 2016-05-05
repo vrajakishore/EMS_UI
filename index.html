@@ -169,7 +169,7 @@
                                 <div class="control-group">
                                     <label class="control-label" for="Email">Email:</label>
                                     <div class="controls">
-                                        <input id="Email" name="Email" type="email" class="form-control" type="text"  class="input-large" required="">
+                                        <input id="Email" name="Email" type="email" class="form-control" ng-model="signUp.email" type="text"  class="input-large" required="">
                                     </div>
                                 </div>
 
@@ -180,44 +180,62 @@
                                 <div class="control-group">
                                     <label class="control-label" for="password">Password:</label>
                                     <div class="controls">
-                                        <input id="password" name="password" class="form-control" type="password" class="input-large" required="">
+                                        <input id="password" name="password" class="form-control" ng-model="signUp.password" type="password" class="input-large" required="">
                                         <em>1-8 Characters</em>
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label" for="Date Of Birth">Date Of Birth:</label>
                                     <div class="controls">
-                                        <input id="Date Of Birth" name="Date Of Birth" type="date" ng-model="signUp.date" class="form-control" type="text"  class="input-large" required="">
+                                        <input id="Date Of Birth" name="Date Of Birth" type="date" ng-model="signUp.date_of_birth" class="form-control" type="text"  class="input-large" required="">
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label" for="Contact Number">Contact Number:</label>
                                     <div class="controls">
-                                        <input id="Contact Number" name="Contact Number" type="number" ng-model="signUp.contact" class="form-control" type="text"  class="input-large" required="">
+                                        <input id="Contact Number" name="contact_number" type="number" ng-model="signUp.contact_number" class="form-control" type="text"  class="input-large" required="">
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label" for="Address">Address:</label>
                                     <div class="controls">
-                                        <input id="Address" name="Address" type="text" ng-model="signUp.address" class="form-control" type="text"  class="input-large" required="">
+                                        <input id="Address" name="address" type="text" ng-model="signUp.address" class="form-control" type="text"  class="input-large" required="">
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label" for="Image Url">Image Url:</label>
                                     <div class="controls">
-                                        <input id="Image Url" name="Image Url" type="url" ng-model="signUp.imageUrl" class="form-control" type="text"  class="input-large" required="">
+                                        <input id="Image Url" name="Image" type="url" ng-model="signUp.image" class="form-control" type="text"  class="input-large" required="">
                                     </div>
                                 </div>
                                 <!-- Multiple Radios (inline) -->
                                 <br>
                                 <div class="control-group">
-                                    <label class="control-label" for="role">Role:</label>
+                                    <label class="control-label" for="Role">Role:</label>
                                     <div class="controls">
                                         <select  ng-model="signUp.role" required>
                                             <option value="Admin">Admin</option>
                                             <option value="Oganiser">Organiser</option>
                                             <option value="User">User</option>
                                         </select>
+
+                                    </div>
+
+                                    <div class="input-group well-sm">
+
+                                        <select class="form-control" ng-model="signUp.security_question" required>
+
+                                            <option value="Name of your first pet?">Name of your first pet?</option>
+                                            <option value="Mother's maiden name?">Mother's maiden name?</option>
+                                            <option value="Favorite food?">Favorite food?</option>
+                                            <option value="Favorite place?">Favorite place?</option>
+                                            <option value="Lover's name?">Lover's name?</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="input-group well-sm">
+
+                                        <input type="password" ng-model="signUp.security_answer" class="form-control" placeholder="Security Answer" name="security_answer" required>
 
                                     </div>
 

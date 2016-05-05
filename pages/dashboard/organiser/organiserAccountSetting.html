@@ -97,7 +97,7 @@
 
                         <div class="input-group well-sm">
 
-                           <select  ng-model="organiserEdit.role" required>
+                           <select  class="form-control" ng-model="organiserEdit.role" required>
 
                                <option value="Oganiser">Organiser</option>
                                <option value="User">User</option>
@@ -106,14 +106,11 @@
                         </div>
 
 
-                        <div class="input-group well-sm">
-                            <input type="submit" ng-click="editProfile(organiserEdit)" class=" btn btn-primary">
-                        </div>
-
-
                             <div class="input-group well-sm">
 
-                                <select  ng-model="organiserEdit.security_question" required>
+
+
+                                <select class="form-control" ng-model="organiserEdit.security_question" required>
 
                                     <option value="Name of your first pet?">Name of your first pet?</option>
                                     <option value="Mother's maiden name?">Mother's maiden name?</option>
@@ -130,6 +127,14 @@
                                 <input type="password" ng-model="organiserEdit.security_answer" class="form-control" placeholder="Security Answer" name="security_answer" required>
 
                             </div>
+
+
+                        <div class="input-group well-sm">
+                            <input type="submit" ng-click="editProfile(organiserEdit)" class=" btn btn-primary">
+                        </div>
+
+
+
                         </form>
                     </div>
 
