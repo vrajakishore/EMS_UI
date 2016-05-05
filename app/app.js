@@ -150,8 +150,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('adminDashboard',{
             url: '/adminDashboard',
-            templateUrl: 'pages/dashboard/admin/adminDashboard.html'
-            //controller:
+            templateUrl: 'pages/dashboard/admin/adminDashboard.html',
+            controller:'adminDashboardController'
         })
 
         .state('adminDashboard.adminAccountSetting',{

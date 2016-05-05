@@ -8,8 +8,8 @@ routerApp.service('SearchService',function($http){
         $http.get(url).then(function (resp){
             /*console.log("JSON DATA")*/
 
-            console.log(resp.data);
-            //callback(resp.data);
+            //console.log(resp.data);
+            callback(resp.data);
         },function (resp) {
             callback([]);
         })

@@ -30,15 +30,15 @@ routerApp.controller('eventDetailsController', function($scope,$location,$state,
     /* Rating section works here */
 
 
-    $scope.ratingURL = 'http://din52002787:9999/BME/showDislikes?name='+$rootScope.eventId;
+   /* $scope.ratingURL = 'http://din52002787:9999/BME/showDislikes?name='+$rootScope.eventId;
     //console.log($scope.commentsURL);
     SearchService(callbackForRating,$scope.ratingURL);
 
     function callbackForRating(data){
-        /*console.log("IN CALL BACK OF COMMENTS");*/
+        /!*console.log("IN CALL BACK OF COMMENTS");*!/
         $rootScope.rating =  data;
         console.log("rating "+$rootScope.rating);
-    };
+    };*/
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
     /* Comment section works here */
