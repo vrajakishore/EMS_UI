@@ -11,10 +11,14 @@ routerApp.controller('userDashboardController',function($scope,$state,$location,
     }
     else{
 
+        if(change.newPassword==change.confirmPassword){
         $scope.changePassword = function (Details) {
 
             console.log(Details);
 
+        }}
+        else{
+            console.log(mismatched);
         }
 
 

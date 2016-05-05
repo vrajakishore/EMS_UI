@@ -40,7 +40,7 @@
 
                         <div class="input-group well-sm">
 
-                            <input type="password" ng-model="change.retypePassword" class="form-control" placeholder="Retype Password" required>
+                            <input type="password" ng-model="change.confirmPassword" class="form-control" placeholder="Retype Password" required>
 
                         </div>
 
@@ -67,7 +67,7 @@
 
                         <div class="input-group well-sm">
 
-                            <input type="date" ng-model="edit.dateOfBirth" class="form-control" placeholder="Date Of Birth" name="dob" required>
+                            <input type="date" ng-model="edit.date_of_birth" class="form-control" placeholder="Date Of Birth" name="dob" required>
 
                         </div>
 
@@ -79,18 +79,18 @@
 
                         <div class="input-group well-sm">
 
-                            <input type="url" ng-model="edit.imageUrl" class="form-control" placeholder="Image Url" name="Iurl" required>
+                            <input type="url" ng-model="edit.image" class="form-control" placeholder="Image Url" name="Iurl" required>
 
                         </div>
 
                         <div class="input-group well-sm">
 
-                            <input type="number" ng-model="edit.Contact" class="form-control" placeholder="Contact Number" name="contact" required>
+                            <input type="number" ng-model="edit.contact_number" class="form-control" placeholder="Contact Number" name="contact" required>
 
                         </div>
                         <div class="input-group well-sm">
 
-                            <input type="text" ng-model="edit.Address" class="form-control" placeholder="Address" name="address" required>
+                            <input type="text" ng-model="edit.address" class="form-control" placeholder="Address" name="address" required>
 
                         </div>
 
@@ -103,6 +103,24 @@
                            </select>
 
                         </div>
+
+                            <div class="input-group well-sm">
+
+                                <select  ng-model="edit.security_question" required>
+
+                                    <option value="Name of your first pet?">Name of your first pet?</option>
+                                    <option value="Mother's maiden name?">Mother's maiden name?</option>
+                                    <option value="Favorite food?">Favorite food?</option>
+                                    <option value="Favorite place?">Favorite place?</option>
+                                    <option value="Lover's name?">Lover's name?</option>
+                                </select>
+
+                            </div>
+                            <div class="input-group well-sm">
+
+                                <input type="password" ng-model="edit.security_answer" class="form-control" placeholder="Security Answer" name="security_answer" required>
+
+                            </div>
 
 
                         <div class="input-group well-sm">
