@@ -40,9 +40,10 @@
 
                         <div class="input-group well-sm">
 
-                            <input type="password" ng-model="organiserChange.retypePassword" class="form-control" placeholder="Retype Password" required>
+                            <input type="password" ng-model="organiserChange.confirmPassword" class="form-control" placeholder="Retype Password" required>
 
                         </div>
+
 
                         <div class="input-group well-sm">
                             <input type="submit" ng-click="changePassword(organiserChange)" class=" btn btn-primary">
@@ -67,7 +68,7 @@
 
                         <div class="input-group well-sm">
 
-                            <input type="date" ng-model="organiserEdit.dateOfBirth" class="form-control" placeholder="Date Of Birth" name="dob" required>
+                            <input type="date" ng-model="organiserEdit.date_of_birth" class="form-control" placeholder="Date Of Birth" name="dob" required>
 
                         </div>
 
@@ -79,18 +80,18 @@
 
                         <div class="input-group well-sm">
 
-                            <input type="url" ng-model="organiserEdit.imageUrl" class="form-control" placeholder="Image Url" name="Iurl" required>
+                            <input type="url" ng-model="organiserEdit.image" class="form-control" placeholder="Image Url" name="Iurl" required>
 
                         </div>
 
                         <div class="input-group well-sm">
 
-                            <input type="number" ng-model="organiserEdit.Contact" class="form-control" placeholder="Contact Number" name="contact" required>
+                            <input type="number" ng-model="organiserEdit.contact_number" class="form-control" placeholder="Contact Number" name="contact" required>
 
                         </div>
                         <div class="input-group well-sm">
 
-                            <input type="text" ng-model="organiserEdit.Address" class="form-control" placeholder="Address" name="address" required>
+                            <input type="text" ng-model="organiserEdit.address" class="form-control" placeholder="Address" name="address" required>
 
                         </div>
 
@@ -108,8 +109,31 @@
                         <div class="input-group well-sm">
                             <input type="submit" ng-click="editProfile(organiserEdit)" class=" btn btn-primary">
                         </div>
+
+
+                            <div class="input-group well-sm">
+
+                                <select  ng-model="organiserEdit.security_question" required>
+
+                                    <option value="Name of your first pet?">Name of your first pet?</option>
+                                    <option value="Mother's maiden name?">Mother's maiden name?</option>
+                                    <option value="Favorite food?">Favorite food?</option>
+                                    <option value="Favorite place?">Favorite place?</option>
+                                    <option value="Lover's name?">Lover's name?</option>
+                                </select>
+
+                            </div>
+
+
+                            <div class="input-group well-sm">
+
+                                <input type="password" ng-model="organiserEdit.security_answer" class="form-control" placeholder="Security Answer" name="security_answer" required>
+
+                            </div>
                         </form>
                     </div>
+
+
 
                     <div class="tab-pane fade" id="tab3primary">
 

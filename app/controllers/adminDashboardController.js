@@ -12,24 +12,33 @@ routerApp.controller('adminDashboardController',function($scope,$state,SearchSer
 
     /* Admin Edit Profile */
 
+    $scope.editProfile = function (Details) {
 
+        console.log(Details);
+
+    }
+    $scope.changePassword = function (Details) {
+
+        console.log(Details);
+
+    }
 
 
 
 
 
     /* Admin change Password */
-   /* $scope.changePassword = function (newPassWord) {
-        $scope.linkForNewPwd = "http://din51002665:8181/EventManagement/changePassWord?user_id="+$rootScope.idOfUser+"&password="+newPassWord;
-        $http.get($scope.linkForNewPwd).then(function(resp){
-            //alert(resp.data);
-            $scope.changePwdSuccess();
-            $scope.LoginError = false;
-            setTimeout(function() {
-                $('#loginErrorDiv').fadeOut('fast');
-            }, 5000);
-        })
-    }*/
+    //$scope.changePassword = function (newPassWord) {
+    //    $scope.linkForNewPwd = "http://din51002665:8181/EventManagement/changePassWord?user_id="+$rootScope.idOfUser+"&password="+newPassWord;
+    //    $http.get($scope.linkForNewPwd).then(function(resp){
+    //        //alert(resp.data);
+    //        $scope.changePwdSuccess();
+    //        $scope.LoginError = false;
+    //        setTimeout(function() {
+    //            $('#loginErrorDiv').fadeOut('fast');
+    //        }, 5000);
+    //    })
+    //}
 
 
 
