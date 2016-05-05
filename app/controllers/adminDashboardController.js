@@ -3,7 +3,7 @@
  */
 
 
-routerApp.controller('adminDashboardController',function($scope,$state,$location,$stateParams,$rootScope,$http,$window) {
+routerApp.controller('adminDashboardController',function($scope,$state,SearchService,$location,$stateParams,$rootScope,$http,$window) {
 
     $scope.isLogin = $rootScope.isLogin;
     $rootScope.currentLocation = $location.path();
@@ -19,7 +19,7 @@ routerApp.controller('adminDashboardController',function($scope,$state,$location
 
 
     /* Admin change Password */
-    $scope.changePassword = function (newPassWord) {
+   /* $scope.changePassword = function (newPassWord) {
         $scope.linkForNewPwd = "http://din51002665:8181/EventManagement/changePassWord?user_id="+$rootScope.idOfUser+"&password="+newPassWord;
         $http.get($scope.linkForNewPwd).then(function(resp){
             //alert(resp.data);
@@ -29,7 +29,7 @@ routerApp.controller('adminDashboardController',function($scope,$state,$location
                 $('#loginErrorDiv').fadeOut('fast');
             }, 5000);
         })
-    }
+    }*/
 
 
 
