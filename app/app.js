@@ -217,6 +217,13 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
 
         })
+    //faq
+        .state('faq', {
+            url: '/faq',
+            templateUrl: 'pages/faq.html'
+
+
+        })
 
 });
 
