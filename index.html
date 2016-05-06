@@ -213,7 +213,7 @@
                                 <div class="control-group">
                                     <label class="control-label" for="Role">Role:</label>
                                     <div class="controls">
-                                        <select  ng-model="signUp.role" required>
+                                        <select class="form-control" ng-model="signUp.role" required>
                                             <option value="Admin">Admin</option>
                                             <option value="Oganiser">Organiser</option>
                                             <option value="User">User</option>
@@ -245,7 +245,7 @@
                                 <div class="control-group">
                                     <label class="control-label" for="confirmsignup"></label>
                                     <div class="controls">
-                                        <button id="confirmsignup" ng-click="#" name="confirmsignup" class="btn btn-success">Sign Up</button>
+                                        <button id="confirmsignup" ng-click="signup(signUp)" name="confirmsignup" class="btn btn-success">Sign Up</button>
                                     </div>
                                 </div>
                             </fieldset>

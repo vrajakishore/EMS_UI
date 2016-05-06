@@ -41,6 +41,8 @@ routerApp.controller('dashBoardController', function($scope,$location,$state,$st
 
 
 
+
+
         $rootScope.uid = userDetails.userid;
         $rootScope.password = userDetails.password;
 
@@ -104,7 +106,16 @@ routerApp.controller('dashBoardController', function($scope,$location,$state,$st
         }
     }
 
-    $scope.logout = function(){
+
+        //signUp
+
+        $scope.signup = function(userDetails) {
+
+            console.log(userDetails);
+        }
+
+
+            $scope.logout = function(){
         $rootScope.isLogin = false;
         $state.go('home');
         $scope.menuLog = "LOGIN";
