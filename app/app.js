@@ -73,10 +73,10 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         //nested view of search page in events
 
-        .state('events.eventsSearch.popularity',{
-            url:'/SearchbyPopularity',
-            templateUrl:'pages/events/popularitySearch.html',
-            controller:'searchByPopularityController'
+        .state('events.eventsSearch.category',{
+            url:'/SearchbyCategory',
+            templateUrl:'pages/events/categorySearch.html',
+            controller:'searchByCategoryController'
         })
 
         .state('events.eventsSearch.certificate',{
