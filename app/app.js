@@ -172,10 +172,14 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         })
 
         .state('feedback',{
-        url: '/feedback',
-        templateUrl:'pages/feedback.html'
+            url: '/feedback',
+            templateUrl:'pages/feedback.html'
+        })
 
-    })
+        .state('forgotPassword',{
+            url: '/forgotPassword',
+            templateUrl:'pages/forgotpassword.html'
+        })
     /*Organiser Dashboard
      */
         .state('organiserDashboard', {
