@@ -77,7 +77,7 @@
             <li><a ui-sref="events"><strong>EVENTS</strong></a></li>
             <li><a ng-click="dashboardfn()"><strong>DASHBOARD</strong></a></li>
             <li ng-hide="isLogin"><a type="button" data-toggle="modal" data-target="#loginModal"><strong>{{menuLog}}</strong></a></li>
-           <!-- <li>
+            <li>
                 <a>
                 <form class="search-container" action="#">
                     <input id="search-box" type="text" class="search-box" name="q" />
@@ -85,8 +85,7 @@
                     <input type="submit" id="search-submit" />
                 </form></a>
             </li>
-        </ul>-->
-            </ul>
+        </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
@@ -214,8 +213,8 @@
                                 <div class="control-group">
                                     <label class="control-label" for="Role">Role:</label>
                                     <div class="controls">
-                                        <select  ng-model="signUp.role" required>
-
+                                        <select class="form-control" ng-model="signUp.role" required>
+                                            <option value="Admin">Admin</option>
                                             <option value="Oganiser">Organiser</option>
                                             <option value="User">User</option>
                                         </select>
@@ -246,7 +245,7 @@
                                 <div class="control-group">
                                     <label class="control-label" for="confirmsignup"></label>
                                     <div class="controls">
-                                        <button id="confirmsignup" ng-click="#" name="confirmsignup" class="btn btn-success">Sign Up</button>
+                                        <button id="confirmsignup" ng-click="signup(signUp)" name="confirmsignup" class="btn btn-success">Sign Up</button>
                                     </div>
                                 </div>
                             </fieldset>
