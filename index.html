@@ -14,7 +14,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
-    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'>
+    <link rel="stylesheet prefetch" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <link rel="stylesheet" href="css/style.css">
@@ -35,7 +35,7 @@
     <script src="js/pace.min.js"></script>
     <!--<script src="js/angular-flash.min.js"></script>-->
     <link rel="stylesheet" type="text/css" href="css/footer.css">
-    <link rel="stylesheet" type="text/css" href="css/search.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/search.css">-->
 
     <!--angular app and controllers-->
 
@@ -138,7 +138,7 @@
                                     <div class="controls">
                                         <button ng-click="login(loginUser)" id="signin" name="signin" class="btn btn-success" data-dismiss="modal">Sign In</button>
                                     </div>
-                                    <a uiref="#" >Forgot Password</a>
+                                    <a ui-sref="forgotPassword" onclick="$('#loginModal').modal('hide')">Forgot Password</a>
                                 </div>
                             </fieldset>
                         </form>
@@ -331,10 +331,10 @@
 
                             <ul class="nomargin">
 
-                                <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-3x social-fb" id="social"></i></a>
-                                <a href="https://twitter.com"><i class="fa fa-twitter-square fa-3x social-tw" id="social"></i></a>
-                                <a href="https://plus.google.com"><i class="fa fa-google-plus-square fa-3x social-gp" id="social"></i></a>
-                                <a href="mailto:nitin.parbhakar@capgemini.com"><i class="fa fa-envelope-square fa-3x social-em" id="social"></i></a>
+                                <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-3x social-fb" id="fb"></i></a>
+                                <a href="https://twitter.com"><i class="fa fa-twitter-square fa-3x social-tw" id="twitter"></i></a>
+                                <a href="https://plus.google.com"><i class="fa fa-google-plus-square fa-3x social-gp" id="gplus"></i></a>
+                                <a href="mailto:nitin.parbhakar@capgemini.com"><i class="fa fa-envelope-square fa-3x social-em" id="mail"></i></a>
 
                             </ul>
                         </div>
